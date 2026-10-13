@@ -17,3 +17,9 @@ ese/supplement/
 # Cited sources are not redistributed (see sources/SOURCES.md)
 sources/*
 !sources/SOURCES.md
+ese/submission.pdf
+ese/fig1-review.png
+ese/figures/
+ese/reference.docx
+ese/pagebreak.lua
+ese/nolabels.tex

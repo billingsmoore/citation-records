@@ -1,0 +1,18 @@
+{
+  "bibkey": "lee2026reflens",
+  "source": "sources/lee2026reflens.pdf",
+  "source_version": "AAAI-26 proceedings PDF; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+      "claim": "RefLens takes the cited work (auto-downloaded or added by the user), locates evidence in it and judges whether it supports the claim.",
+      "verdict": "SUPPORTED",
+      "excerpt": "a Crawler agent then automatically downloads the original source PDFs from online academic databases ... It provides the model with the entire structured text of the original reference and the target citation in a single prompt, instructing it to identify and extract verbatim the most relevant text spans that support or contradict the claim.",
+      "location": "Method: RefLens, Preprocessing and Hierarchical Verification (pp. 41625-41626); Ethical Statement notes users 'may manually add the document' (p. 41626)",
+      "note": "Supported. Judgement of support is framed as the 'validity' axis of a three-axis evaluation; no verdict label set is given, and RefLens is correctly not cited for the partial-support clause."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "bibkey": "sarol2024citationintegrity",
+  "source": "sources/sarol2024citationintegrity.pdf",
+  "source_version": "PMC11231046.1 (published version); retrieved 2026-10-12",
+  "audited": "2026-10-13",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 32,
+      "sentence": "In a separate study, about 39\\% of an annotated corpus of 3,063 citations to 100 highly cited biomedical articles contained an accuracy error \\citep{sarol2024citationintegrity}.",
+      "claim": "The study annotated 3,063 citations to 100 highly cited biomedical articles, and about 39% of them had an accuracy error.",
+      "verdict": "SUPPORTED",
+      "excerpt": "We manually annotated 100 highly-cited biomedical publications (reference articles) and citations to them. ... A total of 3063 citation instances were annotated (39.18% with accuracy errors).",
+      "location": "p. 1, Abstract (Results); cf. Section 3.1 and Table 1 (Total errors 1200 of 3063, 39.18%, comprising 18.02% major and 21.16% minor)"
+    }
+  ]
+}

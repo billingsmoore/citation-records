@@ -15,7 +15,7 @@
 % One paragraph per source line: tools/bibaudit.py splits sentences within a line.
 
 \title{Claim-Level Citation Records Submitted with the Bibliography:\\A Proposal and Worked Example}
-\author{Jacob Moore\\Lawrence Technological University\\\texttt{jmoore10@ltu.edu}}
+\author{Jacob Moore*\\Lawrence Technological University, Southfield, Michigan, USA\\[1ex]*Corresponding author: \texttt{jmoore10@ltu.edu}\\Lawrence Technological University, 21000 West Ten Mile Road,\\Southfield, MI 48075, USA\\[1ex]Funding: none}
 \date{}
 
 \begin{document}
@@ -29,7 +29,7 @@ Language models have made fabricated references an editorial concern, but existe
 
 \section{Citation issues before and after generative AI}
 
-A citation claims both that the cited work exists, and that it says what the citing sentence attributes to it. The second, in particular, has been a persistent issue even prior to rise of generative AI. A meta-analysis of 28 studies of medical journal articles published prior to 2015 estimated that about a quarter of quotations contained an error, about half of them major \citep{jergas2015quotation}. An update in 2025, covering 46 studies and some 32,000 quotations, put the rate at 16.9\%, with no improvement over time \citep{baethge2025quotation}. In a separate study of annotated corpus of 3,063 citations to 100 highly cited biomedical articles, about 39\% contained an accuracy error \citep{sarol2024citationintegrity}.
+A citation claims both that the cited work exists and that it says what the citing sentence attributes to it. The second, in particular, has been a persistent issue since well before the rise of generative AI. A meta-analysis of 28 studies of medical journal articles published prior to 2015 estimated that about a quarter of quotations contained an error, about half of them major \citep{jergas2015quotation}. An update in 2025, covering 46 studies and some 32,000 quotations, put the rate at 16.9\%, with no improvement over time \citep{baethge2025quotation}. In a separate study, about 39\% of an annotated corpus of 3,063 citations to 100 highly cited biomedical articles contained an accuracy error \citep{sarol2024citationintegrity}.
 
 Language models have made even the claim that the cited work exists suspect. A scan by GPTZero found 100 fabricated references, most of them to works that do not exist, in 53 papers accepted at NeurIPS 2025 \citep{ansari2026compound}, and a scan of the 2025 papers accepted at ICLR, ICML, NeurIPS and USENIX Security estimated that 0.38--0.81\% of their references were likely hallucinated \citep{russinovich2026phantom}. ACL identified more than 100 accepted papers citing non-existent literature during camera-ready checks \citep{acl2026statement}. Quoting a real source does not guarantee support either: in clinical question answering, one model quoted its sources verbatim for 98.0\% of its claims, but only 37.1\% were fully substantiated by those quotes, mostly because of what the authors call ``unsupported addition'': the claim states more than its quote \citep{zhang2026verifiable}.
 
@@ -45,7 +45,7 @@ An editor checking a submission may lack access to sources and must work without
 
 \section{Proposal: submit the audit record with the bibliography}
 
-We propose that authors submit a claim-level record of every citation, alongside, or embedded in, the bibliography file, holding for each citing sentence the fields in Table~\ref{tab:fields}. An author may write it by hand or utilize a system like those described above to draft it and check the result.
+We propose that authors submit a claim-level record of every citation, alongside, or embedded in, the bibliography file, holding for each citing sentence the fields in Table~\ref{tab:fields}. An author may write it by hand or use a system like those described above to draft it and check the result.
 
 \begin{table}[t]
 \centering
@@ -71,16 +71,16 @@ The model for this suggestion is the replication package. Several economics jour
 
 The record supports three levels of verification. Completeness, that every citing sentence has a record and every record a sentence, is deterministic and catches records left behind by edits. Excerpt verification, a search for each excerpt in the editor's own copy of the source, is also deterministic and catches fabricated or misattributed excerpts, including any a model invented. The third is whether the excerpt supports the claim. As described above, a verified excerpt alone does not guarantee this. This check still requires a judgement, but it is now a comparison of two short texts rather than a search through a paper.
 
-While the record does not necessarily establish that a citation is accurate (i.e. an excerpt can be genuine but out of context, and an overstatement can be labelled supported), it puts the author's reading of each source on record, where it can be checked.
+While the record does not necessarily establish that a citation is accurate (for example, an excerpt can be genuine but out of context, and an overstatement can be labelled supported), it puts the author's reading of each source on record, where it can be checked.
 
 \section{Embedding the record in the bibliography}
 
-As a practical implementation, we embed the record in the BibTeX file as a comment block above each entry, between fixed markers, so that it travels with the bibliography through every system that already accepts the BibTeX format, but is ignored by BibTeX itself. Figure~\ref{fig:example} shows one block from this article's bibliography. The blocks are generated from one JSON file per reference, and a script regenerates them after draft revisions. Sentences that have moved are shown at their new line; records whose sentence has gone are marked \texttt{STALE}; citing sentences with no record are marked \texttt{NOT AUDITED}. The same script can rebuild the JSON from the comment blocks, so a reader holding only the manuscript and the bibliography can run every check.
+As a practical implementation, we embed the record in the BibTeX file as a comment block above each entry, between fixed markers, so that it travels with the bibliography through every system that already accepts the BibTeX format, but is ignored by BibTeX itself. Figure~\ref{fig:example} shows one block from this article's bibliography. The blocks are generated from one JSON (JavaScript Object Notation) file per reference, and a script regenerates them after draft revisions. Sentences that have moved are shown at their new line; records whose sentence has gone are marked \texttt{STALE}; citing sentences with no record are marked \texttt{NOT AUDITED}. The same script can rebuild the JSON from the comment blocks, so a reader holding only the manuscript and the bibliography can run every check.
 
 \begin{figure}[t]
 \centering
 \VerbatimInput[fontsize=\scriptsize,frame=single]{figures/example-block.txt}
-\caption{A generated record block from the audit of this article's first draft, as it appeared above its entry in \texttt{references.bib}. The partial verdict led to the revision of the second sentence.}
+\caption{A generated record block from the audit of this article's first draft, as it appeared above its entry in \texttt{references.bib}. The partial verdict led to the revision of the second sentence. The record was written by a Claude Opus 5.5 agent and laid out by \texttt{bibaudit.py}.}
 \label{fig:example}
 \end{figure}
 
@@ -88,11 +88,11 @@ Excerpt verification against extracted text cannot rely on exact matching alone.
 
 \section{Case study: the references of this article}
 
-We audited the drafts of this article with the procedure proposed here. Four instances of a language model (Claude Opus 5.5), each given the released prompt and a share of the references, read each source in full and wrote one record per citing sentence in about three minutes. Of the first draft's 25 records, covering 12 sentences and 19 references, 15 were judged supported and ten partially supported; all 25 excerpts occurred verbatim in their sources. None of the ten concerned a citation to the wrong work. All were overstatements, such as a figure attributed to the wrong sample, a feature of two systems described as typical of five, or a dropped hedge. After revision, the drift check marked the changed records \texttt{STALE}, and re-auditing them found one new overstatement introduced by the revision itself. The author then judged all 26 records of the revised text blind to the agent's verdicts, seeing only what an editor would see: the sentence, the claim and the excerpt. The verdicts agreed on 23. Two of the three disagreements were failures of the record: one excerpt did not show that the components it described belonged to the system named, and another omitted the hedge the sentence relied on. We added a rule to the prompt that an excerpt must establish every element of the claim on its own. After eight rounds, every record of the final text is supported, with every excerpt verbatim and none stale or missing. At list prices, the first full audit cost an estimated US\$1.90--3.20 (8--13 cents per record) and all eight rounds US\$5.40--9.10, the ranges reflecting unlogged reasoning tokens. All materials are released, and readers can rerun every check on this article.
+We audited the drafts of this article with the procedure proposed here. Four instances of a language model (Claude Opus 5.5), each given the released prompt and a share of the references, read each source in full and wrote one record per citing sentence in about three minutes. Of the first draft's 25 records, covering 12 sentences and 19 references, 15 were judged supported and ten partially supported; all 25 excerpts occurred verbatim in their sources. None of the ten concerned a citation to the wrong work. All were overstatements, such as a figure attributed to the wrong sample, a feature of two systems described as typical of five, or a dropped hedge. After revision, the drift check marked the changed records \texttt{STALE}, and re-auditing them found one new overstatement introduced by the revision itself. The author then judged all 26 records of the revised text blind to the agent's verdicts, seeing only what an editor would see: the sentence, the claim and the excerpt. The verdicts agreed on 23. Two of the three disagreements were failures of the record: one excerpt did not show that the components it described belonged to the system named, and another omitted the hedge the sentence relied on. We added a rule to the prompt that an excerpt must establish every element of the claim on its own. After nine rounds, every record of the final text is supported, with every excerpt verbatim and none stale or missing. At list prices, the first full audit cost an estimated US\$1.90--3.20 (8--13 cents per record) and all nine rounds US\$5.60--9.40, the ranges reflecting unlogged reasoning tokens. All materials are released, and readers can rerun every check on this article.
 
 \section{Limitations}
 
-An editor without access to a source cannot check its excerpts, suggesting that where permitted by copyright law, sources also being submitted is a valuable addition. The support judgment remains fallible, whether made by a person or a model, and model-drafted records share the model's failure modes; hence the deterministic excerpt check. The record adds work for authors, though an author who has read a source should be able to supply its supporting passage. Uncited assertions pass every check. An invented excerpt that closely paraphrases the right source could reach \texttt{NEAR}, so \texttt{NEAR} results should be read. The comment format is specific to BibTeX; CSL JSON or RIS would need an equivalent field.
+An editor without access to a source cannot check its excerpts; where copyright permits, authors could usefully submit the sources as well. The support judgement remains fallible, whether made by a person or a model, and model-drafted records share the model's failure modes; hence the deterministic excerpt check. The record adds work for authors, though an author who has read a source should be able to supply its supporting passage. Uncited assertions pass every check. An invented excerpt that closely paraphrases the right source could reach \texttt{NEAR}, so \texttt{NEAR} results should be read. The comment format is specific to BibTeX; Citation Style Language (CSL) JSON or RIS would need an equivalent field.
 
 \section{Conclusion}
 
@@ -104,7 +104,7 @@ The author used Claude Opus 5.5 (Anthropic), through Claude Code, to search the 
 
 \section*{Supplementary material}
 
-S1: audit prompts. S2: the annotated \texttt{references.bib}. The audit tool (\texttt{bibaudit.py}), the audit records for every round, the human judgments and the drafts audited are available at \TBD{repository URL}. The cited sources are not redistributed; each is identified, with its version and retrieval date, in the released source list.
+S1: audit prompts. S2: the annotated \texttt{references.bib}. The audit tool (\texttt{bibaudit.py}), the audit records for every round, the human judgements and the drafts audited are available at \url{https://github.com/billingsmoore/citation-records}. The cited sources are not redistributed; each is identified, with its version and retrieval date, in the released source list.
 
 \section*{Acknowledgements}
 
