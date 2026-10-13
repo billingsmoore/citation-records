@@ -6,7 +6,7 @@
   "claims": [
     {
       "file": "main.tex",
-      "line": 31,
+      "line": 34,
       "sentence": "ACL identified more than 100 accepted papers citing non-existent literature during camera-ready checks \\citep{acl2026statement}.",
       "claim": "During camera-ready checks, ACL identified more than 100 accepted (ACL 2026) papers citing non-existent literature.",
       "verdict": "SUPPORTED",

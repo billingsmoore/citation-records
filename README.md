@@ -22,26 +22,41 @@ everything needed to rerun the checks.
 | `audit/human-check/` | The author's judgements of the records: `labels.json` (blind, 26 records; see the case study) and `labels-round9.json` (the 11 records written afterwards) |
 | `audit/removed/` | Records for a reference cut during revision |
 | `sources/SOURCES.md` | Each cited source, with its version and retrieval date |
-| `ese/` | Build of the European Science Editing submission files |
+| `ese/`, `arxiv/` | Builds of the journal submission files and the arXiv source package |
 
-The cited sources themselves are not redistributed. To run the excerpt check, obtain each
-one as listed in `sources/SOURCES.md` and save it under `sources/` with the file name given there.
+The cited sources themselves are not redistributed (see below for running the checks
+that need them).
 
 ## Running the checks
 
-Requires Python 3.10+ and `pdftotext` (poppler-utils).
+Requires Python 3.9+ and `pdftotext` (poppler-utils); no Python packages beyond the standard library.
 
 ```sh
 python3 tools/bibaudit.py check      # every citing sentence has a record, and every record a sentence
 python3 tools/bibaudit.py excerpts   # every excerpt occurs in its source (needs sources/)
 python3 tools/bibaudit.py annotate   # regenerate the audit blocks in references.bib
-python3 tools/bibaudit.py extract    # rebuild audit/*.json from the blocks in references.bib
+python3 tools/bibaudit.py extract    # rebuild the JSON records from references.bib (see below)
 python3 tools/crosscheck.py          # control: each excerpt against every other source (needs sources/)
 ```
 
-A reader holding only `main.tex` and `references.bib` can run `extract`, then `check` and
-`excerpts --from-bib`. `python3 tools/bibaudit.py --help` describes each command and the
-record format.
+`check` and `annotate` need only the repository. `excerpts` and `crosscheck.py` need the
+sources: download each from the URL in `sources/SOURCES.md` and save it as
+`sources/<file>` under the file name given there. Sources not present are reported as
+`NO SOURCE` (or skipped by `crosscheck.py`), so the checks can be run on any subset.
+
+A reader holding only `main.tex` and `references.bib` can rebuild the records from the
+comment blocks and check them without this repository's `audit/` directory:
+
+```sh
+mkdir records
+python3 tools/bibaudit.py --audit records extract
+python3 tools/bibaudit.py --audit records check
+python3 tools/bibaudit.py excerpts --from-bib
+```
+
+`extract` writes into `audit/` unless `--audit` is given, so use a separate directory to
+avoid overwriting the committed records. `python3 tools/bibaudit.py --help` describes each
+command and the record format.
 
 ## License
 

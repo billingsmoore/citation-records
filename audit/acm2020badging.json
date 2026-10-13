@@ -6,7 +6,7 @@
   "claims": [
     {
       "file": "main.tex",
-      "line": 65,
+      "line": 70,
       "sentence": "Several economics journals require code and data that reproduce the published results, and their data editors check them before acceptance \\citep{aea2026datapolicy,es2026reproducibility}; ACM awards badges to papers whose artifacts are evaluated \\citep{acm2020badging}.",
       "claim": "ACM awards an 'Artifacts Evaluated' badge to papers whose artifacts undergo evaluation.",
       "verdict": "SUPPORTED",

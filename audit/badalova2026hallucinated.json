@@ -6,7 +6,7 @@
   "claims": [
     {
       "file": "main.tex",
-      "line": 31,
+      "line": 36,
       "sentence": "Several tools that check whether references exist are now available, but their results are limited by reference extraction errors, incomplete metadata and database coverage, and still need manual checking \\citep{badalova2026hallucinated}.",
       "claim": "Several reference-existence checking tools are available; their results are limited by extraction errors, incomplete metadata and database coverage, and need manual checking.",
       "verdict": "SUPPORTED",

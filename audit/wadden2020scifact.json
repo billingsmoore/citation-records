@@ -6,7 +6,7 @@
   "claims": [
     {
       "file": "main.tex",
-      "line": 37,
+      "line": 42,
       "sentence": "Whether a source supports a claim is a claim-verification problem, studied first on abstracts \\citep{wadden2020scifact} and now against full text.",
       "claim": "Scientific claim verification was introduced as a task over research abstracts.",
       "verdict": "SUPPORTED",

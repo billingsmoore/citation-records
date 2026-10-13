@@ -6,7 +6,7 @@
   "claims": [
     {
       "file": "main.tex",
-      "line": 37,
+      "line": 42,
       "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
       "claim": "RefLens takes the cited work (auto-downloaded or added by the user), locates evidence in it and judges whether it supports the claim.",
       "verdict": "SUPPORTED",

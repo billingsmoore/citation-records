@@ -6,7 +6,7 @@
   "claims": [
     {
       "file": "main.tex",
-      "line": 31,
+      "line": 34,
       "sentence": "A scan by GPTZero found 100 fabricated references, most of them to works that do not exist, in 53 papers accepted at NeurIPS 2025 \\citep{ansari2026compound}, and a scan of the 2025 papers accepted at ICLR, ICML, NeurIPS and USENIX Security estimated that 0.38--0.81\\% of their references were likely hallucinated \\citep{russinovich2026phantom}.",
       "claim": "A scan of accepted 2025 ICLR, ICML, NeurIPS and USENIX Security papers estimated that 0.38-0.81% of their references were likely hallucinated.",
       "verdict": "SUPPORTED",

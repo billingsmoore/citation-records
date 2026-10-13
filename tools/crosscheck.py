@@ -17,10 +17,19 @@ ap.add_argument("--top", type=int, default=5)
 args = ap.parse_args()
 
 records = [json.loads(p.read_text()) for p in sorted((args.root / "audit").glob("*.json"))]
-texts = {}
+texts, missing = {}, []
 for r in records:
-    t = words(normalize(source_text(args.root / r["source"])))
+    path = args.root / r["source"]
+    if not path.exists():
+        missing.append(r["source"])
+        continue
+    t = words(normalize(source_text(path)))
     texts[r["bibkey"]] = (t, set(grams(t)))
+if missing:
+    print(f"{len(missing)} of {len(records)} sources missing (see sources/SOURCES.md); "
+          "checking against the rest")
+if len(texts) < 2:
+    raise SystemExit("need at least two sources under sources/ to cross-check")
 
 scores = []
 for r in records:
