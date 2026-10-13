@@ -14,7 +14,7 @@ everything needed to rerun the checks.
 |---|---|
 | `main.tex` | The manuscript (master copy) |
 | `references.bib` | The bibliography, with a generated audit block above each entry |
-| `tools/bibaudit.py` | The audit tool (`tools/crosscheck.py`: the cross-source control) |
+| `tools/bibaudit.py` | The audit tool (`crosscheck.py`: the cross-source control; `fetch_sources.py`: downloads the sources) |
 | `audit/<bibkey>.json` | Current audit records, one per reference |
 | `audit/PROMPT.md` | The audit prompt (Supplementary material S1) |
 | `audit/prompts/` | The prompt actually given to each auditing agent, per round |
@@ -40,9 +40,14 @@ python3 tools/crosscheck.py          # control: each excerpt against every other
 ```
 
 `check` and `annotate` need only the repository. `excerpts` and `crosscheck.py` need the
-sources: download each from the URL in `sources/SOURCES.md` and save it as
-`sources/<file>` under the file name given there. Sources not present are reported as
-`NO SOURCE` (or skipped by `crosscheck.py`), so the checks can be run on any subset.
+sources, which `python3 tools/fetch_sources.py` downloads into `sources/` from the URLs in
+`sources/SOURCES.md`. This is best effort: a URL can move, a site can block scripted
+downloads, and a web page (the ICLR, ICML, ACL, AEA, Econometric Society and ACM
+policies) can change after the 2026-10-12 retrieval, in which case an excerpt that
+matched the audited copy may show as `NEAR` or `MISSING`. The arXiv, PMC and proceedings
+links are versioned. Retrieve anything that fails by hand and save it under the file
+name given in `SOURCES.md`. Sources not present are reported as `NO SOURCE` (or skipped
+by `crosscheck.py`), so the checks can be run on any subset.
 
 A reader holding only `main.tex` and `references.bib` can rebuild the records from the
 comment blocks and check them without this repository's `audit/` directory:
