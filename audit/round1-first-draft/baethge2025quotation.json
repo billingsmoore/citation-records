@@ -1,0 +1,17 @@
+{
+  "bibkey": "baethge2025quotation",
+  "source": "sources/baethge2025quotation.pdf",
+  "source_version": "PMC12285159.1 (published version); retrieved 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 29,
+      "sentence": "A meta-analysis of 28 studies of medical journal articles estimated that about a quarter of quotations contained an error, about half of them major \\citep{jergas2015quotation}, and an update covering 46 studies and some 32,000 quotations put the rate at 16.9\\%, with no improvement over time \\citep{baethge2025quotation}.",
+      "claim": "Updated meta-analysis of 46 studies / ~32,000 quotations: 16.9% quotation error rate, no improvement over time.",
+      "verdict": "SUPPORTED",
+      "excerpt": "identified 46 studies analyzing 32,000 quotations/references. ... Results 16.9% (95% CI: 14.1%-20.0%) of quotations were incorrect, with approximately half classified as major errors (8.0% [95% CI: 6.4%-10.0%]). ... Meta-regression showed no significant improvement in quotation accuracy over recent years ... Conclusions Quotation errors remain a problem in the medical literature, with no improvement over time.",
+      "location": "p. 1, Abstract (Methods, Results, Conclusions)"
+    }
+  ]
+}

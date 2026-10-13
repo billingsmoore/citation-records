@@ -1,0 +1,17 @@
+{
+  "bibkey": "acl2026statement",
+  "source": "sources/acl2026statement.html",
+  "source_version": "undated page (includes \"Update\" note); 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 31,
+      "sentence": "ACL identified more than 100 accepted papers citing non-existent literature during camera-ready checks \\citep{acl2026statement}.",
+      "claim": "During camera-ready checks, ACL identified more than 100 accepted (ACL 2026) papers citing non-existent literature.",
+      "verdict": "SUPPORTED",
+      "excerpt": "During the final consistency checks of the camera ready versions of papers accepted to ACL 2026, we identified over 100 papers that contained citations to non-existent literature.",
+      "location": "Statement body, paragraph beginning 'During the final consistency checks'"
+    }
+  ]
+}

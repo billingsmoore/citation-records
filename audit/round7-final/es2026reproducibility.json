@@ -1,0 +1,18 @@
+{
+  "bibkey": "es2026reproducibility",
+  "source": "sources/es2026reproducibility.html",
+  "source_version": "undated page; retrieved 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 65,
+      "sentence": "Several economics journals require code and data that reproduce the published results, and their data editors check them before acceptance \\citep{aea2026datapolicy,es2026reproducibility}; ACM awards badges to papers whose artifacts are evaluated \\citep{acm2020badging}.",
+      "claim": "Econometric Society journals require data and code to replicate results and conduct reproducibility checks before final acceptance.",
+      "verdict": "SUPPORTED",
+      "excerpt": "Authors of these papers must provide, prior to acceptance, raw data, codes, and sufficient documentation to permit the replication of all the results in the paper and in the appendices approved for publication online. ... The journals of the ES will conduct reproducibility checks for the empirical, experimental, and/or simulation results included in the paper and in the approved online appendices prior to final acceptance.",
+      "location": "Data and Code Availability Policy, introductory paragraph",
+      "note": "Minor: exemptions can be granted, and checks may be partial (Rule 8, 'selected parts'), with unchecked results disclosed in the README."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "bibkey": "russinovich2026phantom",
+  "source": "sources/russinovich2026phantom.pdf",
+  "source_version": "arXiv v2; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 31,
+      "sentence": "In 2025 and 2026, references to works that do not exist were found in papers accepted at NeurIPS \\citep{ansari2026compound,russinovich2026phantom}, ACL identified more than 100 accepted papers citing non-existent literature during camera-ready checks \\citep{acl2026statement}, and ICLR and ICML now treat such references as grounds for desk rejection \\citep{iclr2026response,russinovich2026phantom}.",
+      "claim": "References to non-existent works were found in papers accepted at NeurIPS.",
+      "verdict": "PARTIAL",
+      "excerpt": "In 2025, roughly one in twenty NeurIPS and USENIX Security papers contains at least two likely hallucinated academic-paper-like references under our strict definition.",
+      "location": "p. 1, Abstract",
+      "note": "The source finds 'likely hallucinated' references in accepted NeurIPS papers, using a definition that counts both non-existent works and substantial author-list mismatches. The sentence drops the hedge and narrows the category to non-existent works. Together with ansari2026compound the clause is still supported, but for this source alone it is stated more strongly than the source does. Suggested: 'references likely to be hallucinated, including to works that do not exist, were found in papers accepted at NeurIPS \\citep{ansari2026compound,russinovich2026phantom}'."
+    },
+    {
+      "file": "main.tex",
+      "line": 31,
+      "sentence": "In 2025 and 2026, references to works that do not exist were found in papers accepted at NeurIPS \\citep{ansari2026compound,russinovich2026phantom}, ACL identified more than 100 accepted papers citing non-existent literature during camera-ready checks \\citep{acl2026statement}, and ICLR and ICML now treat such references as grounds for desk rejection \\citep{iclr2026response,russinovich2026phantom}.",
+      "claim": "ICLR and ICML now treat hallucinated (non-existent) references as grounds for desk rejection.",
+      "verdict": "PARTIAL",
+      "excerpt": "ICLR 2026 states that papers with undisclosed or an erroneous LLM use that leads to false claims, misrepresentations, or hallucinated references can be desk rejected, while emphasizing that disciplinary action should rest on concrete evidence rather than detector scores alone [9]. ICML 2026 similarly lists hallucinated references as grounds for desk rejection",
+      "location": "p. 2, Section 1 (Introduction); repeated in Section 2 (Related Work, 'Policy responses')",
+      "note": "This is a secondary report of the conference policies; for ICML it is the manuscript's only citation, so a policy is attributed through a secondary source (Russinovich cites the ICML 2026 Peer Review Ethics page, their ref. [10]). The source also scopes the policies to the 2026 cycle, and frames ICLR's provision as conditional on undisclosed or erroneous LLM use and backed by concrete evidence, not detector scores. Suggested: 'and ICLR 2026 and ICML 2026 list hallucinated references as possible grounds for desk rejection \\citep{iclr2026response,russinovich2026phantom}'. Better still, cite the ICML 2026 policy page directly."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "bibkey": "icml2026ethics",
+  "source": "sources/icml2026ethics.html",
+  "source_version": "undated page; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 31,
+      "sentence": "ICLR 2026 desk-rejects papers that include hallucinated references \\citep{iclr2026response}, and ICML 2026 lists them among its grounds for desk rejection \\citep{icml2026ethics}.",
+      "claim": "ICML 2026 lists hallucinated references among its grounds for desk rejection.",
+      "verdict": "SUPPORTED",
+      "excerpt": "Grounds for desk rejection of an individual submission include (but are not limited to): Placehlolder abstracts at abstract submission. ... Hallucinated references.",
+      "location": "Section 'Desk Rejection' (revised January 24, 2026)"
+    }
+  ]
+}

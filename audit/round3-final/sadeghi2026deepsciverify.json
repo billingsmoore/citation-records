@@ -1,0 +1,28 @@
+{
+  "bibkey": "sadeghi2026deepsciverify",
+  "source": "sources/sadeghi2026deepsciverify.pdf",
+  "source_version": "arXiv v1; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+      "claim": "DeepSciVerify retrieves the cited work, extracts relevant passages and judges whether they support the claim.",
+      "verdict": "SUPPORTED",
+      "excerpt": "it retrieves the complete paper when available, extracts relevant passages using RAGbased passage retrieval, and produces a final verdict from passage-level evidence.",
+      "location": "Sec. 1 Introduction (p. 1)",
+      "note": "Supported for the clause it is cited for. Its label set is SUPPORTS / CONTRADICTS / NEI, and it is correctly not cited for the partial-support clause."
+    },
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Locating the passage is harder in full text than in an abstract: RefVerifier's evidence-localization hit rate was 98\\% on abstracts and 68\\% on complete papers \\citep{mocan2026refverifier}, and in one small evaluation, adding full-text evidence improved verifiers only modestly, which the authors attribute to the difficulty of selecting the most informative passages \\citep{sadeghi2026deepsciverify}.",
+      "claim": "In one small evaluation, adding full-text evidence improved verifiers only modestly, which the authors attribute to the difficulty of selecting the most informative passages.",
+      "verdict": "SUPPORTED",
+      "excerpt": "Abstracts are widely available but often lack the\ndetail needed to verify citation-level claims, while naively\nproviding full-text documents leads to only modest improvements (Section 6.3). This suggests that the challenge is not\nonly retrieving more information, but selecting the parts of\nthe document most informative for the claim.",
+      "location": "Sec. 7 Discussion, p. 8; results in Sec. 6.3 Main Results (Table 3), 91-instance SciTance test split",
+      "note": "Supported. Minor: in Sec. 6.3 full text 'improves most models' but GPT-4 actually decreases (82.2 to 81.3 Micro-F1) and Claude Sonnet 4.6 rises only 81.1 to 82.4, so 'improved verifiers only modestly' matches the authors' own summary but slightly flatters one model; the attribution is a hedged suggestion ('This suggests'), which 'attribute' renders acceptably."
+    }
+  ]
+}

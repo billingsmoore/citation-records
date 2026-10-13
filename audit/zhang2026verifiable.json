@@ -1,0 +1,18 @@
+{
+  "bibkey": "zhang2026verifiable",
+  "source": "sources/zhang2026verifiable.pdf",
+  "source_version": "arXiv v2; 2026-10-12",
+  "audited": "2026-10-13",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 34,
+      "sentence": "Quoting a real source does not guarantee support either: in clinical question answering, one model quoted its sources verbatim for 98.0\\% of its claims, but only 37.1\\% were fully substantiated by those quotes, mostly because of what the authors call ``unsupported addition'': the claim states more than its quote \\citep{zhang2026verifiable}.",
+      "claim": "In clinical QA, one model (claude-opus-5) gave verbatim quotes for 98.0% of its claims but only 37.1% were fully substantiated by them; most shortfalls fall in the authors' 'unsupported addition' category, where the claim states more than its quote supports.",
+      "verdict": "SUPPORTED",
+      "excerpt": "For instance, claude-opus-5 produces verbatim quotes for 98.0% of its claims, but fully substantiates only 37.1%. ... Unsupported addition covers cases where the quote fully substantiates some, but not all, of the statements ... in the claim. ... The vast majority of claims fall in the unsupported addition category.",
+      "location": "p. 1, Abstract; p. 5, Sec. 4, Finding 2; Table 3 (claude-opus-5 row: 347 of 401 shortfall cases are unsupported addition)",
+      "note": ""
+    }
+  ]
+}

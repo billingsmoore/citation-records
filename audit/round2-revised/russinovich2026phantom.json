@@ -1,0 +1,18 @@
+{
+  "bibkey": "russinovich2026phantom",
+  "source": "sources/russinovich2026phantom.pdf",
+  "source_version": "arXiv v2; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 31,
+      "sentence": "References to works that do not exist were found in 53 papers accepted at NeurIPS 2025 \\citep{ansari2026compound}, and a scan of the 2025 papers accepted at ICLR, ICML, NeurIPS and USENIX Security estimated that 0.38--0.81\\% of their references were likely hallucinated \\citep{russinovich2026phantom}.",
+      "claim": "A scan of 2025 accepted papers at ICLR, ICML, NeurIPS and USENIX Security estimated that 0.38-0.81% of their references were likely hallucinated.",
+      "verdict": "SUPPORTED",
+      "excerpt": "For the latest complete year, 2025, the all-reference rate is 0.38% at ICLR, 0.54% at ICML, 0.68% at NeurIPS, and 0.81% at USENIX Security",
+      "location": "Sec. 5.2 (Findings), p. 6-7; corpus in Sec. 5",
+      "note": "Supported. Minor: 0.38-0.81% is the range of per-venue all-reference rates (0.31-0.55% over academic-paper-like references only); the corpus covers 'every accepted paper we could retrieve' and 'likely hallucinated' includes substantial author-list mismatches as well as unfound works. The authors also say false-positive noise dominates at the reference level, which the manuscript's 'estimated ... likely' adequately hedges."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "bibkey": "ansari2026compound",
+  "source": "sources/ansari2026compound.pdf",
+  "source_version": "arXiv v1; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 31,
+      "sentence": "A scan by GPTZero found 100 fabricated references, most of them to works that do not exist, in 53 papers accepted at NeurIPS 2025 \\citep{ansari2026compound}, and a scan of the 2025 papers accepted at ICLR, ICML, NeurIPS and USENIX Security estimated that 0.38--0.81\\% of their references were likely hallucinated \\citep{russinovich2026phantom}.",
+      "claim": "A GPTZero scan found 100 fabricated references, most to non-existent works, in 53 papers accepted at NeurIPS 2025.",
+      "verdict": "SUPPORTED",
+      "excerpt": "Despite review by 3–5 expert researchers per paper, these fabricated citations evaded detection, appearing in 53 published papers (≈1% of all accepted papers). We develop a five-category taxonomy\nthat classifies hallucinations by their failure mode: Total Fabrication (66%)",
+      "location": "Abstract, p. 1; GPTZero scan described in Sec. 2.1 (Data Source), p. 3; category shares in Table 1, Sec. 3.1",
+      "note": "Supported. Context: the source re-analyses GPTZero's public report (secondary for the scan itself, which the sentence now attributes to GPTZero); GPTZero scanned 4,841 of the 5,290 accepted papers and human-verified each flag as a 'probable hallucination'; 'most ... do not exist' rests on 66% Total Fabrication (zero overlap with any real work); a footnote notes GPTZero's page also gives 51 papers in one place."
+    }
+  ]
+}

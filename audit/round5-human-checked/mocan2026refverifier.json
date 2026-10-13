@@ -1,0 +1,37 @@
+{
+  "bibkey": "mocan2026refverifier",
+  "source": "sources/mocan2026refverifier.pdf",
+  "source_version": "arXiv v1; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 39,
+      "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+      "claim": "RefVerifier takes the cited work (auto-resolved or uploaded), localizes evidence, judges support, and has a partial-support verdict.",
+      "verdict": "SUPPORTED",
+      "excerpt": "RefVerifier extracts citation-bearing sentences from manuscripts, checks bibliography metadata against scholarly databases, resolves references to full-text open-access PDFs, localizes relevant evidence passages, and generates verdicts with natural language explanations.",
+      "location": "Abstract (p. 1); Stage 4 in Fig. 1 lists '4-class verdict (Supported, Partially Supported, Not Supported, NEI)' (p. 3); resolver 'first checks a local cache and user uploads' (p. 2)"
+    },
+    {
+      "file": "main.tex",
+      "line": 39,
+      "sentence": "Retrieval is incomplete: RefVerifier resolved 57.6\\% of 992 references, cited by 23 sampled papers, to open-access full text \\citep{mocan2026refverifier}, and BibAgent infers support for paywalled sources from how other papers cite them rather than from the source itself \\citep{li2026bibagent}.",
+      "claim": "RefVerifier resolved 57.6% of 992 references, cited by 23 sampled papers, to open-access full text.",
+      "verdict": "SUPPORTED",
+      "excerpt": "We evaluated open-access PDF retrieval on 992 references cited across 23 randomly selected source papers from four research domains. RefVerifier resolves 57.6% (571/992) of these references to full-text PDFs.",
+      "location": "Sec. 4.1, Stage 2: Reference Retrieval Availability; Table 2 (p. 4)",
+      "note": "Supported. Context only: a title-matching audit found 93% of downloaded PDFs matched the cited work, so slightly fewer than 57.6% were correctly resolved."
+    },
+    {
+      "file": "main.tex",
+      "line": 39,
+      "sentence": "Locating the passage is harder in full text than in an abstract: RefVerifier's evidence-localization hit rate was 98\\% on abstracts and 68\\% on complete papers \\citep{mocan2026refverifier}, and in one small evaluation, naively adding full-text evidence changed verifier accuracy only modestly, which the authors suggest reflects the difficulty of selecting the most informative passages \\citep{sadeghi2026deepsciverify}.",
+      "claim": "RefVerifier's evidence-localization hit rate was 98% on abstracts and 68% on complete papers, i.e. localization is harder in full text.",
+      "verdict": "SUPPORTED",
+      "excerpt": "Evaluating RefVerifier on public benchmarks shows claim detection at an F1 score of 0.990, open-access resolution of 57.6% of references, and evidence localization with a hit rate of 98% on abstracts and 68% on complete cited papers. ... Localization performs better on SciFact abstracts, where the bi-encoder reaches a hit rate of 94%. Full-paper localization is more challenging. ... The deployed Merged LLM Mode (gpt-5.6-terra) reaches a hit rate of 68% on full papers and 98% on abstracts (MRR 0.96)",
+      "location": "Abstract (p. 1); Sec. 4.1 Stage 3: Evidence Localization (p. 4)",
+      "note": "Supported. Context only: these are top-3 (k = 3) hit rates of the Merged LLM Mode measured on different small datasets (SciFact subset, 64 claims, for abstracts; Citation-Integrity, 65 citances with spans, for full papers), so the abstract/full-text contrast is confounded by dataset."
+    }
+  ]
+}

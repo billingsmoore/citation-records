@@ -1,0 +1,17 @@
+{
+  "bibkey": "jergas2015quotation",
+  "source": "sources/jergas2015quotation.pdf",
+  "source_version": "PMC4627914.1; retrieved 2026-10-12",
+  "audited": "2026-10-13",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 32,
+      "sentence": "A meta-analysis of 28 studies of medical journal articles published prior to 2015 estimated that about a quarter of quotations contained an error, about half of them major \\citep{jergas2015quotation}.",
+      "claim": "Meta-analysis of 28 studies (pre-2015) of quotation accuracy in medical journal articles estimated ~25% total quotation errors, about half of them major.",
+      "verdict": "SUPPORTED",
+      "excerpt": "We searched Medline and PubMed Central (via PubMed) from their inception through December 26, 2014 ... In total, we included 28 studies in our main analysis ... The studies appeared between 1985 and 2013 ... Roughly one in every eight to nine references was seriously incorrect, according to our main analysis (11.9% major quotation errors [8.4, 16.6]) ... Regarding total quotation errors, we estimate from the studies included that one fourth of all references is wrong or problematic (25.4% [19.5, 32.5], n = 28).",
+      "location": "pp. 3-5, Methods (Search) and Results, Main analysis"
+    }
+  ]
+}

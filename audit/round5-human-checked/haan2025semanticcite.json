@@ -1,0 +1,18 @@
+{
+  "bibkey": "haan2025semanticcite",
+  "source": "sources/haan2025semanticcite.pdf",
+  "source_version": "arXiv v1; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+      "claim": "SemanticCite takes the cited work (supplied by the user), locates evidence in it, judges support, and has a partial-support verdict.",
+      "verdict": "SUPPORTED",
+      "excerpt": "The citation verification system takes three inputs: citation text, reference document, and optional metadata. Then it produces a classification label, confidence score, supporting evidence, and detailed reasoning. ... allowing users to input citation text, upload reference documents (PDF, TXT, or ... Markdown formats), or download references directly from URLs.",
+      "location": "Sec. 3.1 System Architecture (p. 4); Sec. 3.5 Web Interface (pp. 9-10); four-class scheme (Supported, Partially Supported, Unsupported, Uncertain) in Abstract (p. 1)",
+      "note": "Supported. The reference document is supplied by the user (upload or URL), which the revised 'retrieved automatically or supplied by the user' now covers; evidence is located by hybrid retrieval within it; the label set includes Partially Supported."
+    }
+  ]
+}

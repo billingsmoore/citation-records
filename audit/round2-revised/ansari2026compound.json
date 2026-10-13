@@ -1,0 +1,18 @@
+{
+  "bibkey": "ansari2026compound",
+  "source": "sources/ansari2026compound.pdf",
+  "source_version": "arXiv v1; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 31,
+      "sentence": "References to works that do not exist were found in 53 papers accepted at NeurIPS 2025 \\citep{ansari2026compound}, and a scan of the 2025 papers accepted at ICLR, ICML, NeurIPS and USENIX Security estimated that 0.38--0.81\\% of their references were likely hallucinated \\citep{russinovich2026phantom}.",
+      "claim": "References to works that do not exist were found in 53 papers accepted at NeurIPS 2025.",
+      "verdict": "PARTIAL",
+      "excerpt": "Yet recent analysis reveals that at least 53 of these papers (≈1%) contained fabricated citations that evaded detection throughout the review process [1].",
+      "location": "p. 1, Sec. 1 (Introduction), ref. [1] = GPTZero report; data source Sec. 2.1, p. 3; taxonomy counts Table 1 and Sec. 3.3",
+      "note": "Two problems. (1) The finding is GPTZero's (its Hallucination Check scan of 4,841 of the 5,290 accepted papers, with human verification); Ansari et al. re-analyse GPTZero's public dataset, so this is a secondary report cited as if primary (a footnote also notes GPTZero gives 51 papers in one place). (2) Not all of these are works that do not exist: only 66 of the 100 are Total Fabrication; 27 are Partial Attribute Corruption, which includes real papers with corrupted metadata (e.g. 'The paper exists, but two authors are omitted and one (Kyle Richardson) is added'), and the source does not say that each of the 53 papers contains a non-existent work. Suggested: 'Fabricated references, most of them to works that do not exist, were found in 53 papers accepted at NeurIPS 2025 by a GPTZero scan analysed in \\citep{ansari2026compound}'."
+    }
+  ]
+}

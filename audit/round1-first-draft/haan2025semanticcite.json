@@ -1,0 +1,18 @@
+{
+  "bibkey": "haan2025semanticcite",
+  "source": "sources/haan2025semanticcite.pdf",
+  "source_version": "arXiv v1; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Recent systems retrieve the cited work, locate candidate evidence and assign a verdict, typically including a partial-support category \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}.",
+      "claim": "SemanticCite retrieves the cited work, locates candidate evidence and assigns a verdict that includes a partial-support category.",
+      "verdict": "PARTIAL",
+      "excerpt": "The citation verification system takes three inputs: citation text, reference document, and optional metadata. Then it produces a classification label, confidence score, supporting evidence, and detailed reasoning. ... allowing users to input citation text, upload reference documents (PDF, TXT, or ... Markdown formats), or download references directly from URLs.",
+      "location": "Sec. 3.1 System Architecture (p. 4); Sec. 3.5 Web Interface and Deployment (pp. 9-10)",
+      "note": "Evidence location, verdict and the four-class scheme with Partially Supported are stated (Sec. 3.2). But SemanticCite does not retrieve the cited work: the reference document is an input the user uploads or points to by URL; its 'retrieval' is passage retrieval within that supplied document. Suggested rewording: 'Recent systems retrieve the cited work or take it as input, locate candidate evidence and assign a verdict; some add a partial-support category \\citep{haan2025semanticcite,mocan2026refverifier}.' (cite all five for the first clause, only these two for the partial-support clause)."
+    }
+  ]
+}

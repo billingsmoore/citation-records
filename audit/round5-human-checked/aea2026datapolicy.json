@@ -1,0 +1,18 @@
+{
+  "bibkey": "aea2026datapolicy",
+  "source": "sources/aea2026datapolicy.html",
+  "source_version": "\"This version (February 2026)\"; retrieved 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 65,
+      "sentence": "Several economics journals require code and data that reproduce the published results, and their data editors check them before acceptance \\citep{aea2026datapolicy,es2026reproducibility}; ACM awards badges to papers whose artifacts are evaluated \\citep{acm2020badging}.",
+      "claim": "AEA journals require, before acceptance, data and code sufficient to reproduce results, and the AEA data editor checks them (reproducibility checks).",
+      "verdict": "SUPPORTED",
+      "excerpt": "Prior to acceptance, authors of papers that contain empirical work, simulations, or experimental work must provide the data, code, and other details of the computations sufficient to permit replication. ... The AEA data editor will assess compliance with this policy, including by conducting reproducibility checks and verifying the accuracy of the information provided",
+      "location": "Data and Code Availability Policy, opening paragraphs",
+      "note": "Minor: applies to papers with empirical, simulation or experimental work, not all papers; the policy allows modified requirements when data cannot be shared."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "bibkey": "iclr2026response",
+  "source": "sources/iclr2026response.html",
+  "source_version": "posted 2025-11-19; retrieved 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 31,
+      "sentence": "In 2025 and 2026, references to works that do not exist were found in papers accepted at NeurIPS \\citep{ansari2026compound,russinovich2026phantom}, ACL identified more than 100 accepted papers citing non-existent literature during camera-ready checks \\citep{acl2026statement}, and ICLR and ICML now treat such references as grounds for desk rejection \\citep{iclr2026response,russinovich2026phantom}.",
+      "claim": "ICLR treats hallucinated (non-existent) references as grounds for desk rejection (the ICML part is attributed to russinovich2026phantom).",
+      "verdict": "SUPPORTED",
+      "excerpt": "Extensive and/or careless LLM usage often results in false claims, misrepresentations, or hallucinated content, including hallucinated references. As stated in our previous blog post: hallucinations of this kind would be considered a Code of Ethics violation on the part of the paper's authors. We have been desk -rejecting, and will continue to desk -reject, any paper that includes such issues.",
+      "location": "Section 'LLM-generated papers'",
+      "note": "Minor: the post states the ICLR 2026 policy (Nov 2025); 'now' is supported for the 2026 cycle only. Action is taken only when an AC or SAC finds concrete evidence."
+    }
+  ]
+}

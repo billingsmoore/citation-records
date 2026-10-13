@@ -1,0 +1,32 @@
+% >>> citation-audit sarol2024citationintegrity
+% Source: sources/sarol2024citationintegrity.pdf (PMC11231046.1 (published version); retrieved
+%         2026-10-12) -- audited 2026-10-12
+% [1] main.tex:29 -- SUPPORTED
+%   Paper:  In an annotated corpus of 3,063 citations to 100 highly cited biomedical articles, about
+%           39\% contained an accuracy error \citep{sarol2024citationintegrity}.
+%   Claim:  Corpus of 3,063 annotated citations to 100 highly cited biomedical articles; ~39% had
+%           accuracy errors.
+%   Source: (p. 1, Abstract (Results)) "We manually annotated 100 highly-cited biomedical
+%           publications (reference articles) and citations to them. ... A total of 3063 citation
+%           instances were annotated (39.18% with accuracy errors)."
+% [2] main.tex:37 -- PARTIAL
+%   Paper:  On human-annotated biomedical citations, the best model reached 0.59 micro-F1
+%           \citep{sarol2024citationintegrity}.
+%   Claim:  On this corpus the best model achieved 0.59 micro-F1.
+%   Source: (p. 1, Abstract (Results); see also Sec. 3, Table 4) "The best performing model—which
+%           uses citation sentences as citation context, the BM25 model with MonoT5 reranker for
+%           retrieving top-20 sentences, and a fine-tuned MultiVerS model for accuracy label
+%           classification—yielded 0.59 micro-F1 and 0.52 macro-F1 score. GPT-4 in-context learning
+%           performed better in identifying accurate citations, but it lagged for erroneous
+%           citations (0.65 micro-F1, 0.45 macro-F1)."
+%   Note:   0.59 micro-F1 is the authors' 'best performing' fine-tuned MultiVerS model, but it is
+%           not the highest micro-F1 reported: GPT-4 in-context learning reached 0.65 micro-F1
+%           (lower macro-F1, 0.45), and oracle models with gold evidence reached 0.73-0.75 micro-F1.
+%           'Best' is the authors' overall/macro-F1 judgement, so quoting micro-F1 alone
+%           misrepresents it. Suggested: 'On human-annotated biomedical citations, the authors'
+%           best-performing model reached 0.59 micro-F1 and 0.52 macro-F1
+%           \citep{sarol2024citationintegrity}.'
+% <<< citation-audit
+@article{sarol2024citationintegrity,
+  author    = {Sarol, Maria Janina and Ming, Shufan and ...},
+  ...

@@ -1,0 +1,28 @@
+{
+  "bibkey": "li2026bibagent",
+  "source": "sources/li2026bibagent.pdf",
+  "source_version": "arXiv v2; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 39,
+      "sentence": "Retrieval is incomplete: RefVerifier resolved 57.6\\% of 992 references, cited by 23 sampled papers, to open-access full text \\citep{mocan2026refverifier}, and BibAgent infers support for paywalled sources from how other papers cite them rather than from the source itself \\citep{li2026bibagent}.",
+      "claim": "BibAgent judges citations to paywalled sources from how other (downstream) papers cite them rather than from the source text.",
+      "verdict": "SUPPORTED",
+      "excerpt": "ICSV handles citations whose sources are paywalled or otherwise inaccessible. Rather than attempting to reconstruct the missing full text, it treats the research community as a noisy, distributed memory of the source. The key idea is an Evidence Committee: a set of downstream open-access papers that cite the paywalled source B and whose local citation contexts are distilled into aspect-specific evidence statements.",
+      "location": "Sec. 3.3 ICSV: The Evidence Committee Mechanism (p. 5)",
+      "note": "Supported. Context only: ICSV abstains (Undecidable) when too few witness papers are available."
+    },
+    {
+      "file": "main.tex",
+      "line": 39,
+      "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+      "claim": "BibAgent retrieves the cited work, localizes candidate evidence in it and judges whether it supports the citing claim.",
+      "verdict": "SUPPORTED",
+      "excerpt": "B IBAGENT is an end-to-end framework that maps in-text citations to bibliography entries, routes each reference to an accessible verification branch (evidence localization and reasoning over full text) or an inaccessible verification branch (communityconsensus reconstruction from downstream citers) ... The Cited Source Accessibility Classifier (CSAC) then attempts DOI resolution, publisher full-text retrieval, and open-access surrogate matching for each referenced source. Sources with verified full text are routed to ACSV ... ACSV handles citations whose sources are fully accessible. The objective is to localize decisive evidence inside Dcited , decide whether the citing sentence Scite is supported, refuted, or undecidable",
+      "location": "Sec. 1 Introduction (p. 2); Sec. 3.1 and 3.2 ACSV (p. 4)",
+      "note": "Supported for accessible sources (the ACSV branch). Context only: for paywalled sources BibAgent does not read the cited work but reconstructs support from downstream citers (ICSV), which the manuscript states in the next sentence; its verdicts are supported/refuted/undecidable plus error codes, and it is correctly not cited for the partial-support clause."
+    }
+  ]
+}

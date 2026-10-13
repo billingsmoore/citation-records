@@ -1,0 +1,18 @@
+{
+  "bibkey": "lee2026reflens",
+  "source": "sources/lee2026reflens.pdf",
+  "source_version": "AAAI-26 proceedings PDF; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Recent systems retrieve the cited work, locate candidate evidence and assign a verdict, typically including a partial-support category \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}.",
+      "claim": "RefLens retrieves the cited work, locates candidate evidence and assigns a verdict that includes a partial-support category.",
+      "verdict": "PARTIAL",
+      "excerpt": "a Crawler agent then automatically downloads the original source PDFs from online academic databases ... based on a three-axis evaluation model: intent (Cohan et al. 2019), validity (Zhang and Abernethy 2024), and user-defined importance. ... instructing it to identify and extract verbatim the most relevant text spans that support or contradict the claim.",
+      "location": "Method: RefLens, Preprocessing and Hierarchical Verification (pp. 41625-41626)",
+      "note": "Retrieval (Crawler) and evidence location (verbatim span extraction) are stated, and a 'validity' judgement is made. But the paper does not give a verdict label set and mentions no partial-support category. Suggested rewording: 'Recent systems retrieve the cited work or take it as input, locate candidate evidence and assign a verdict; some add a partial-support category \\citep{haan2025semanticcite,mocan2026refverifier}.' (cite all five for the first clause, only these two for the partial-support clause)."
+    }
+  ]
+}

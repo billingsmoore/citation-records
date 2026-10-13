@@ -1,0 +1,18 @@
+{
+  "bibkey": "russinovich2026phantom",
+  "source": "sources/russinovich2026phantom.pdf",
+  "source_version": "arXiv v2; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 31,
+      "sentence": "A scan by GPTZero found 100 fabricated references, most of them to works that do not exist, in 53 papers accepted at NeurIPS 2025 \\citep{ansari2026compound}, and a scan of the 2025 papers accepted at ICLR, ICML, NeurIPS and USENIX Security estimated that 0.38--0.81\\% of their references were likely hallucinated \\citep{russinovich2026phantom}.",
+      "claim": "A scan of accepted 2025 ICLR, ICML, NeurIPS and USENIX Security papers estimated that 0.38-0.81% of their references were likely hallucinated.",
+      "verdict": "SUPPORTED",
+      "excerpt": "We apply RefChecker to accepted camera-ready papers from ICLR, ICML, NeurIPS, and USENIX Security. ... so we read the measured rates as an auditable estimate ... Across our corpus, the share of likely hallucinated references stays below one percent in essentially every venue-year. For the latest complete year, 2025, the all-reference rate is 0.38% at ICLR, 0.54% at ICML, 0.68% at NeurIPS, and 0.81% at USENIX Security; restricting the denominator to academicpaper-like references shifts these to 0.31%, 0.46%, 0.55%, and 0.42%, respectively.",
+      "location": "Abstract (p. 1); Sec. 4 Limitations; Sec. 5.2 Findings",
+      "note": "Supported. Context only: 0.38-0.81% is the range across the four venues (min ICLR, max USENIX Security) of the all-reference rate, not an uncertainty interval; the denominator includes non-paper entries (the academic-paper-like rates are 0.31-0.55%). The corpus is the accepted papers the authors could retrieve and extract, and the authors call the counts a lower bound under a strict definition. Optional clarification: '...estimated that 0.38--0.81\\% of their references, depending on venue, were likely hallucinated'."
+    }
+  ]
+}

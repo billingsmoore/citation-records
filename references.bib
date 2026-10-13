@@ -1,0 +1,654 @@
+% references.bib -- verified 2026-10-12
+% Metadata sources: arXiv API (export.arxiv.org), Crossref (api.crossref.org),
+% NCBI E-utilities / PMC ID converter, publisher and official web pages.
+% Downloaded copies of each source are in sources/ (see sources/SOURCES.md).
+
+% >>> citation-audit jergas2015quotation
+% Source: sources/jergas2015quotation.pdf (PMC4627914.1; retrieved 2026-10-12) -- audited 2026-10-13
+% [1] main.tex:32 -- SUPPORTED
+%   Paper:  A meta-analysis of 28 studies of medical journal articles published prior to 2015
+%           estimated that about a quarter of quotations contained an error, about half of them
+%           major \citep{jergas2015quotation}.
+%   Claim:  Meta-analysis of 28 studies (pre-2015) of quotation accuracy in medical journal articles
+%           estimated ~25% total quotation errors, about half of them major.
+%   Source: (pp. 3-5, Methods (Search) and Results, Main analysis) "We searched Medline and PubMed
+%           Central (via PubMed) from their inception through December 26, 2014 ... In total, we
+%           included 28 studies in our main analysis ... The studies appeared between 1985 and 2013
+%           ... Roughly one in every eight to nine references was seriously incorrect, according to
+%           our main analysis (11.9% major quotation errors [8.4, 16.6]) ... Regarding total
+%           quotation errors, we estimate from the studies included that one fourth of all
+%           references is wrong or problematic (25.4% [19.5, 32.5], n = 28)."
+% <<< citation-audit
+@article{jergas2015quotation,
+  shortjournal = {PeerJ},
+  author    = {Jergas, Hannah and Baethge, Christopher},
+  title     = {Quotation accuracy in medical journal articles---a systematic review and meta-analysis},
+  journal   = {PeerJ},
+  year      = {2015},
+  volume    = {3},
+  pages     = {e1364},
+  doi       = {10.7717/peerj.1364},
+  url       = {https://peerj.com/articles/1364},
+  note      = {PMCID: PMC4627914}
+}
+
+% >>> citation-audit baethge2025quotation
+% Source: sources/baethge2025quotation.pdf (PMC12285159.1 (published version); retrieved 2026-10-12)
+%         -- audited 2026-10-13
+% [1] main.tex:32 -- SUPPORTED
+%   Paper:  An update in 2025, covering 46 studies and some 32,000 quotations, put the rate at
+%           16.9\%, with no improvement over time \citep{baethge2025quotation}.
+%   Claim:  2025 update of the meta-analysis: 46 studies, ~32,000 quotations, 16.9% quotation error
+%           rate, no improvement over time.
+%   Source: (p. 1, Abstract; p. 2, Methods, Literature search) "identified 46 studies analyzing
+%           32,000 quotations/references. ... Results 16.9% (95% CI: 14.1%-20.0%) of quotations were
+%           incorrect ... Meta-regression showed no significant improvement in quotation accuracy
+%           over recent years ... Conclusions Quotation errors remain a problem in the medical
+%           literature, with no improvement over time. ... We updated our meta-analysis from 2015
+%           [8] that"
+% <<< citation-audit
+@article{baethge2025quotation,
+  shortjournal = {Res Integr Peer Rev},
+  author    = {Baethge, Christopher and Jergas, Hannah},
+  title     = {Systematic review and meta-analysis of quotation inaccuracy in medicine},
+  journal   = {Research Integrity and Peer Review},
+  year      = {2025},
+  volume    = {10},
+  number    = {1},
+  pages     = {13},
+  doi       = {10.1186/s41073-025-00173-z},
+  url       = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12285159/},
+  note      = {Article 13. PMID: 40696441; PMCID: PMC12285159}
+}
+
+% >>> citation-audit sarol2024citationintegrity
+% Source: sources/sarol2024citationintegrity.pdf (PMC11231046.1 (published version); retrieved
+%         2026-10-12) -- audited 2026-10-13
+% [1] main.tex:32 -- SUPPORTED
+%   Paper:  In a separate study of annotated corpus of 3,063 citations to 100 highly cited
+%           biomedical articles, about 39\% contained an accuracy error
+%           \citep{sarol2024citationintegrity}.
+%   Claim:  Annotated corpus of 3,063 citations to 100 highly cited biomedical articles; ~39% had
+%           accuracy errors.
+%   Source: (p. 1, Abstract (Results)) "We manually annotated 100 highly-cited biomedical
+%           publications (reference articles) and citations to them. ... A total of 3063 citation
+%           instances were annotated (39.18% with accuracy errors)."
+% <<< citation-audit
+@article{sarol2024citationintegrity,
+  shortjournal = {Bioinformatics},
+  author    = {Sarol, Maria Janina and Ming, Shufan and Radhakrishna, Shruthan and Schneider, Jodi and Kilicoglu, Halil},
+  title     = {Assessing citation integrity in biomedical publications: corpus annotation and {NLP} models},
+  journal   = {Bioinformatics},
+  year      = {2024},
+  volume    = {40},
+  number    = {7},
+  pages     = {btae420},
+  doi       = {10.1093/bioinformatics/btae420},
+  url       = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11231046/},
+  note      = {PMID: 38924508; PMCID: PMC11231046}
+}
+
+% >>> citation-audit haan2025semanticcite
+% Source: sources/haan2025semanticcite.pdf (arXiv v1; 2026-10-12) -- audited 2026-10-12
+% [1] main.tex:42 -- SUPPORTED
+%   Paper:  Recent systems take the cited work, retrieved automatically or supplied by the user,
+%           locate candidate evidence in it and judge whether it supports the claim
+%           \citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent};
+%           some add a partial-support verdict \citep{haan2025semanticcite,mocan2026refverifier}.
+%   Claim:  SemanticCite takes the cited work (supplied by the user), locates evidence in it, judges
+%           support, and has a partial-support verdict.
+%   Source: (Sec. 3.1 System Architecture (p. 4); Sec. 3.5 Web Interface (pp. 9-10); four-class
+%           scheme (Supported, Partially Supported, Unsupported, Uncertain) in Abstract (p. 1)) "The
+%           citation verification system takes three inputs: citation text, reference document, and
+%           optional metadata. Then it produces a classification label, confidence score, supporting
+%           evidence, and detailed reasoning. ... allowing users to input citation text, upload
+%           reference documents (PDF, TXT, or ... Markdown formats), or download references directly
+%           from URLs."
+%   Note:   Supported. The reference document is supplied by the user (upload or URL), which the
+%           revised 'retrieved automatically or supplied by the user' now covers; evidence is
+%           located by hybrid retrieval within it; the label set includes Partially Supported.
+% <<< citation-audit
+@misc{haan2025semanticcite,
+  author        = {Haan, Sebastian},
+  title         = {{SemanticCite}: Citation Verification with {AI}-Powered Full-Text Analysis and Evidence-Based Reasoning},
+  year          = {2025},
+  eprint        = {2511.16198},
+  howpublished  = {arXiv preprint arXiv:2511.16198},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  doi           = {10.48550/arXiv.2511.16198},
+  url           = {https://arxiv.org/abs/2511.16198},
+  note          = {arXiv v1}
+}
+
+% >>> citation-audit mocan2026refverifier
+% Source: sources/mocan2026refverifier.pdf (arXiv v1; 2026-10-12) -- audited 2026-10-13
+% [1] main.tex:42 -- SUPPORTED
+%   Paper:  Recent systems take the cited work, retrieved automatically or supplied by the user,
+%           locate candidate evidence in it and judge whether it supports the claim
+%           \citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent};
+%           some add a partial-support verdict \citep{haan2025semanticcite,mocan2026refverifier}.
+%   Claim:  RefVerifier takes the cited work (auto-resolved or uploaded), localizes evidence, judges
+%           support, and has a partial-support verdict.
+%   Source: (Abstract (p. 1); Stage 4 in Fig. 1 lists '4-class verdict (Supported, Partially
+%           Supported, Not Supported, NEI)' (p. 3); resolver 'first checks a local cache and user
+%           uploads' (p. 2)) "RefVerifier extracts citation-bearing sentences from manuscripts,
+%           checks bibliography metadata against scholarly databases, resolves references to
+%           full-text open-access PDFs, localizes relevant evidence passages, and generates verdicts
+%           with natural language explanations."
+% [2] main.tex:42 -- SUPPORTED
+%   Paper:  First, text retrieval is incomplete: RefVerifier resolved 57.6\% of 992 references,
+%           cited by 23 sampled papers, to open-access full text \citep{mocan2026refverifier}, and
+%           BibAgent infers support for paywalled sources from how other papers cite them rather
+%           than from the source itself \citep{li2026bibagent}.
+%   Claim:  RefVerifier resolved 57.6% of 992 references, cited by 23 sampled papers, to open-access
+%           full text (i.e. retrieval is incomplete).
+%   Source: (Sec. 4.1, Stage 2: Reference Retrieval Availability; Table 2 (p. 4)) "Stage 2:
+%           Reference Retrieval Availability. RefVerifier retrieves the full-text PDFs for 57.6% of
+%           references. We evaluated open-access PDF retrieval on 992 references cited across 23
+%           randomly selected source papers from four research domains. RefVerifier resolves 57.6%
+%           (571/992) of these references to full-text PDFs."
+%   Note:   Supported. Context only: a title-matching audit found 93% of downloaded PDFs matched the
+%           cited work, so slightly fewer than 57.6% were correctly resolved; rates ranged from 35%
+%           (biomedicine) to 86% (CS/ML, physics).
+% [3] main.tex:42 -- SUPPORTED
+%   Paper:  Second, locating the passage is difficult in a full text: RefVerifier's
+%           evidence-localization hit rate was 98\% on abstracts but only 68\% on complete papers
+%           \citep{mocan2026refverifier}, and in one small evaluation, naively adding full-text
+%           evidence changed verifier accuracy only modestly, which the authors suggest reflects the
+%           difficulty of selecting the most informative passages \citep{sadeghi2026deepsciverify}.
+%   Claim:  RefVerifier's evidence-localization hit rate was 98% on abstracts but only 68% on
+%           complete papers, showing passage localization is harder in full text.
+%   Source: (Abstract (p. 1); Sec. 4.1 Stage 3: Evidence Localization (p. 4)) "Evaluating
+%           RefVerifier on public benchmarks shows claim detection at an F1 score of 0.990,
+%           open-access resolution of 57.6% of references, and evidence localization with a hit rate
+%           of 98% on abstracts and 68% on complete cited papers. ... Full-paper localization is
+%           more challenging. ... The deployed Merged LLM Mode (gpt-5.6-terra) reaches a hit rate of
+%           68% on full papers and 98% on abstracts (MRR 0.96)"
+%   Note:   Supported. Context only: these are top-3 (k = 3) hit rates of the Merged LLM Mode on
+%           different small datasets (SciFact subset, 64 claims, for abstracts; Citation-Integrity,
+%           65 citances with spans, for full papers), so the abstract/full-text contrast is
+%           confounded by dataset; the source itself draws the 'more challenging' conclusion.
+% <<< citation-audit
+@inproceedings{mocan2026refverifier,
+  author        = {Mocan, Stefania and Angermeir, Florian and Kreitz, Mark},
+  title         = {{RefVerifier}: Semi-Automated Reference Claim Verification for Scientific Manuscripts},
+  booktitle     = {Proceedings of the 1st International Workshop on Automated Techniques for Integrity and Quality in Software-Engineering Research ({ATIQSER} '26)},
+  year          = {2026},
+  pages         = {15--21},
+  publisher     = {ACM},
+  address       = {Munich, Germany},
+  doi           = {10.1145/3844135.3845866},
+  eprint        = {2609.07652},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.SE},
+  url           = {https://arxiv.org/abs/2609.07652},
+  note          = {arXiv v1}
+}
+
+% >>> citation-audit sadeghi2026deepsciverify
+% Source: sources/sadeghi2026deepsciverify.pdf (arXiv v1; 2026-10-12) -- audited 2026-10-13
+% [1] main.tex:42 -- SUPPORTED
+%   Paper:  Recent systems take the cited work, retrieved automatically or supplied by the user,
+%           locate candidate evidence in it and judge whether it supports the claim
+%           \citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent};
+%           some add a partial-support verdict \citep{haan2025semanticcite,mocan2026refverifier}.
+%   Claim:  DeepSciVerify retrieves the cited work, extracts relevant passages and judges whether
+%           they support the claim.
+%   Source: (Sec. 1 Introduction (p. 1)) "it retrieves the complete paper when available, extracts
+%           relevant passages using RAGbased passage retrieval, and produces a final verdict from
+%           passage-level evidence."
+%   Note:   Supported for the clause it is cited for. Its label set is SUPPORTS / CONTRADICTS / NEI,
+%           and it is correctly not cited for the partial-support clause.
+% [2] main.tex:42 -- SUPPORTED
+%   Paper:  Second, locating the passage is difficult in a full text: RefVerifier's
+%           evidence-localization hit rate was 98\% on abstracts but only 68\% on complete papers
+%           \citep{mocan2026refverifier}, and in one small evaluation, naively adding full-text
+%           evidence changed verifier accuracy only modestly, which the authors suggest reflects the
+%           difficulty of selecting the most informative passages \citep{sadeghi2026deepsciverify}.
+%   Claim:  In one small evaluation, naively adding full-text evidence changed verifier accuracy
+%           only modestly, which the authors suggest reflects the difficulty of selecting the most
+%           informative passages.
+%   Source: (Sec. 6.3 Main Results (p. 6); Sec. 7 Discussion (p. 8)) "Providing access to full-text
+%           evidence improves most models, indicating that information beyond the abstract can be
+%           useful. However, the gains from naive full-text usage are limited: GPT-4 decreases from
+%           82.2 to 81.3 Micro-F1, while Claude Sonnet 4.6 improves only marginally from 81.1 to
+%           82.4. ... Since SC I TANCE uses a 91-instance test split, these gains should be
+%           interpreted with appropriate caution ... while naively providing full-text documents
+%           leads to only modest improvements (Section 6.3). This suggests that the challenge is not
+%           only retrieving more information, but selecting the parts of the document most
+%           informative for the claim."
+%   Note:   Supported. Context only: the metric is Micro-F1 (equal to accuracy for single-label
+%           classification); 'changed' correctly covers GPT-4's small drop; the 91-instance SciTance
+%           test split justifies 'one small evaluation'; 'suggest' matches the source's 'This
+%           suggests'.
+% <<< citation-audit
+@misc{sadeghi2026deepsciverify,
+  author        = {Sadeghi, Shaghayegh and Khajavi, Khashayar and Adhikari, Rise and Tessier, Alexander},
+  title         = {{DeepSciVerify}: Verifying Scientific Claim--Citation Alignment via {LLM}-Driven Evidence Escalation},
+  year          = {2026},
+  eprint        = {2605.27710},
+  howpublished  = {arXiv preprint arXiv:2605.27710},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  doi           = {10.48550/arXiv.2605.27710},
+  url           = {https://arxiv.org/abs/2605.27710},
+  note          = {arXiv v1}
+}
+
+% >>> citation-audit lee2026reflens
+% Source: sources/lee2026reflens.pdf (AAAI-26 proceedings PDF; 2026-10-12) -- audited 2026-10-12
+% [1] main.tex:42 -- SUPPORTED
+%   Paper:  Recent systems take the cited work, retrieved automatically or supplied by the user,
+%           locate candidate evidence in it and judge whether it supports the claim
+%           \citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent};
+%           some add a partial-support verdict \citep{haan2025semanticcite,mocan2026refverifier}.
+%   Claim:  RefLens takes the cited work (auto-downloaded or added by the user), locates evidence in
+%           it and judges whether it supports the claim.
+%   Source: (Method: RefLens, Preprocessing and Hierarchical Verification (pp. 41625-41626); Ethical
+%           Statement notes users 'may manually add the document' (p. 41626)) "a Crawler agent then
+%           automatically downloads the original source PDFs from online academic databases ... It
+%           provides the model with the entire structured text of the original reference and the
+%           target citation in a single prompt, instructing it to identify and extract verbatim the
+%           most relevant text spans that support or contradict the claim."
+%   Note:   Supported. Judgement of support is framed as the 'validity' axis of a three-axis
+%           evaluation; no verdict label set is given, and RefLens is correctly not cited for the
+%           partial-support clause.
+% <<< citation-audit
+@inproceedings{lee2026reflens,
+  author    = {Lee, SeungHoo and Kwon, JuneHyoung and Choi, Jooweon and Yun, JungMin and Yu, Seunguk and Lee, Yoonji and Jang, Jinhee and Kim, YoungBin},
+  title     = {{RefLens}: End-to-End Evidence-Grounded Citation Verification with {LLM} Agents},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  year      = {2026},
+  volume    = {40},
+  number    = {48},
+  pages     = {41625--41627},
+  publisher = {Association for the Advancement of Artificial Intelligence},
+  doi       = {10.1609/aaai.v40i48.42361},
+  url       = {https://ojs.aaai.org/index.php/AAAI/article/view/42361}
+}
+
+% >>> citation-audit li2026bibagent
+% Source: sources/li2026bibagent.pdf (arXiv v2; 2026-10-12) -- audited 2026-10-13
+% [1] main.tex:42 -- SUPPORTED
+%   Paper:  Recent systems take the cited work, retrieved automatically or supplied by the user,
+%           locate candidate evidence in it and judge whether it supports the claim
+%           \citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent};
+%           some add a partial-support verdict \citep{haan2025semanticcite,mocan2026refverifier}.
+%   Claim:  BibAgent retrieves the cited work, localizes candidate evidence in it and judges whether
+%           it supports the citing claim.
+%   Source: (Sec. 1 Introduction (p. 2); Sec. 3.1 and 3.2 ACSV (p. 4)) "B IBAGENT is an end-to-end
+%           framework that maps in-text citations to bibliography entries, routes each reference to
+%           an accessible verification branch (evidence localization and reasoning over full text)
+%           or an inaccessible verification branch (communityconsensus reconstruction from
+%           downstream citers) ... The Cited Source Accessibility Classifier (CSAC) then attempts
+%           DOI resolution, publisher full-text retrieval, and open-access surrogate matching for
+%           each referenced source. Sources with verified full text are routed to ACSV ... ACSV
+%           handles citations whose sources are fully accessible. The objective is to localize
+%           decisive evidence inside Dcited , decide whether the citing sentence Scite is supported,
+%           refuted, or undecidable"
+%   Note:   Supported for accessible sources (the ACSV branch). Context only: for paywalled sources
+%           BibAgent does not read the cited work but reconstructs support from downstream citers
+%           (ICSV), which the manuscript states in the next sentence; its verdicts are
+%           supported/refuted/undecidable plus error codes, and it is correctly not cited for the
+%           partial-support clause.
+% [2] main.tex:42 -- SUPPORTED
+%   Paper:  First, text retrieval is incomplete: RefVerifier resolved 57.6\% of 992 references,
+%           cited by 23 sampled papers, to open-access full text \citep{mocan2026refverifier}, and
+%           BibAgent infers support for paywalled sources from how other papers cite them rather
+%           than from the source itself \citep{li2026bibagent}.
+%   Claim:  BibAgent judges citations to paywalled sources from how other (downstream) papers cite
+%           them rather than from the source text.
+%   Source: (Sec. 3.3 ICSV: The Evidence Committee Mechanism (p. 5)) "ICSV handles citations whose
+%           sources are paywalled or otherwise inaccessible. Rather than attempting to reconstruct
+%           the missing full text, it treats the research community as a noisy, distributed memory
+%           of the source. The key idea is an Evidence Committee: a set of downstream open-access
+%           papers that cite the paywalled source B and whose local citation contexts are distilled
+%           into aspect-specific evidence statements."
+%   Note:   Supported. Context only: ICSV abstains explicitly when community memory is too sparse or
+%           inconsistent.
+% <<< citation-audit
+@misc{li2026bibagent,
+  author        = {Li, Peiran and Lin, Fangzhou and Xing, Shuo and Zheng, Xiang and Hong, Xi and Yang, Siyuan and Sun, Jiashuo and Tu, Zhengzhong and Ni, Chaoqun},
+  title         = {{BibAgent}: An Agentic Framework for Traceable Miscitation Detection in Scientific Literature},
+  year          = {2026},
+  eprint        = {2601.16993},
+  howpublished  = {arXiv preprint arXiv:2601.16993},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.DL},
+  doi           = {10.48550/arXiv.2601.16993},
+  url           = {https://arxiv.org/abs/2601.16993},
+  note          = {arXiv v2}
+}
+
+% >>> citation-audit goo2026citefaithfulness
+% Source: sources/goo2026citefaithfulness.pdf (arXiv v1; 2026-10-12) -- audited 2026-10-13
+% [1] main.tex:42 -- SUPPORTED
+%   Paper:  Finally, verdicts depend on the verifier: in one evaluation the same outputs yielded
+%           unsupported-citation rates from about 3\% to 18\% depending on the verifier, and
+%           verifiers agreed far more on what was supported than on what to flag
+%           \citep{goo2026citefaithfulness}.
+%   Claim:  In one evaluation, the same outputs gave unsupported-citation rates of about 3% to 18%
+%           depending on the verifier, and verifiers agreed much more on what was supported than on
+%           what to flag.
+%   Source: (p. 1, Abstract; p. 9, Sec. 5.4) "On identical agent outputs the measured
+%           unsupported-citation rate ranges from about 3% to about 18% depending only on the
+%           verifier’s strictness, and although verifiers agree on which citations are supported,
+%           they disagree on which to flag ... agree strongly on which citations are supported
+%           (positive-specific agreement 0.90–0.96) but agree on which to flag as unsupported only
+%           weakly (negative-specific agreement 0.27–0.30)"
+% <<< citation-audit
+@misc{goo2026citefaithfulness,
+  author        = {Goo, Taewan and Kim, Junsik and Han, Kyulhee and Jo, GwonYul and Kim, Jong-Soo and Kim, Tae-Hyung},
+  title         = {Evaluating and Guarding Citation Faithfulness in Agentic Scientific Synthesis},
+  year          = {2026},
+  eprint        = {2607.20527},
+  howpublished  = {arXiv preprint arXiv:2607.20527},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  doi           = {10.48550/arXiv.2607.20527},
+  url           = {https://arxiv.org/abs/2607.20527},
+  note          = {arXiv v1}
+}
+
+% >>> citation-audit badalova2026hallucinated
+% Source: sources/badalova2026hallucinated.pdf (arXiv v2; 2026-10-12) -- audited 2026-10-12
+% [1] main.tex:36 -- SUPPORTED
+%   Paper:  Several tools that check whether references exist are now available, but their results
+%           are limited by reference extraction errors, incomplete metadata and database coverage,
+%           and still need manual checking \citep{badalova2026hallucinated}.
+%   Claim:  Several reference-existence checking tools are available; their results are limited by
+%           extraction errors, incomplete metadata and database coverage, and need manual checking.
+%   Source: (p. 1, Abstract; 'several open research tools ... are now available' in Sec. 1, p. 2;
+%           manual checking in Sec. 2 end ('should be manually checked'), and Conclusion) "their
+%           performance is limited by reference extraction errors, incomplete metadata, limited
+%           database coverage, and inconsistent verification results."
+% <<< citation-audit
+@misc{badalova2026hallucinated,
+  author        = {Badalova, Fidan and Mayr, Philipp},
+  title         = {Detecting Hallucinated and Suspicious Citations: What Current Tools Can and Cannot Do},
+  year          = {2026},
+  eprint        = {2607.22693},
+  howpublished  = {arXiv preprint arXiv:2607.22693},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.DL},
+  doi           = {10.48550/arXiv.2607.22693},
+  url           = {https://arxiv.org/abs/2607.22693},
+  note          = {arXiv v2}
+}
+
+% >>> citation-audit ansari2026compound
+% Source: sources/ansari2026compound.pdf (arXiv v1; 2026-10-12) -- audited 2026-10-12
+% [1] main.tex:34 -- SUPPORTED
+%   Paper:  A scan by GPTZero found 100 fabricated references, most of them to works that do not
+%           exist, in 53 papers accepted at NeurIPS 2025 \citep{ansari2026compound}, and a scan of
+%           the 2025 papers accepted at ICLR, ICML, NeurIPS and USENIX Security estimated that
+%           0.38--0.81\% of their references were likely hallucinated
+%           \citep{russinovich2026phantom}.
+%   Claim:  A GPTZero scan found 100 fabricated references, most to non-existent works, in 53 papers
+%           accepted at NeurIPS 2025.
+%   Source: (Abstract, p. 1; GPTZero scan described in Sec. 2.1 (Data Source), p. 3; category shares
+%           in Table 1, Sec. 3.1) "Despite review by 3–5 expert researchers per paper, these
+%           fabricated citations evaded detection, appearing in 53 published papers (≈1% of all
+%           accepted papers). We develop a five-category taxonomy that classifies hallucinations by
+%           their failure mode: Total Fabrication (66%)"
+%   Note:   Supported. Context: the source re-analyses GPTZero's public report (secondary for the
+%           scan itself, which the sentence now attributes to GPTZero); GPTZero scanned 4,841 of the
+%           5,290 accepted papers and human-verified each flag as a 'probable hallucination'; 'most
+%           ... do not exist' rests on 66% Total Fabrication (zero overlap with any real work); a
+%           footnote notes GPTZero's page also gives 51 papers in one place.
+% <<< citation-audit
+@misc{ansari2026compound,
+  author        = {Ansari, Samar},
+  title         = {Compound Deception in Elite Peer Review: A Failure Mode Taxonomy of 100 Fabricated Citations at {NeurIPS} 2025},
+  year          = {2026},
+  eprint        = {2602.05930},
+  howpublished  = {arXiv preprint arXiv:2602.05930},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.DL},
+  doi           = {10.48550/arXiv.2602.05930},
+  url           = {https://arxiv.org/abs/2602.05930},
+  note          = {arXiv v1}
+}
+
+% >>> citation-audit russinovich2026phantom
+% Source: sources/russinovich2026phantom.pdf (arXiv v2; 2026-10-12) -- audited 2026-10-12
+% [1] main.tex:34 -- SUPPORTED
+%   Paper:  A scan by GPTZero found 100 fabricated references, most of them to works that do not
+%           exist, in 53 papers accepted at NeurIPS 2025 \citep{ansari2026compound}, and a scan of
+%           the 2025 papers accepted at ICLR, ICML, NeurIPS and USENIX Security estimated that
+%           0.38--0.81\% of their references were likely hallucinated
+%           \citep{russinovich2026phantom}.
+%   Claim:  A scan of accepted 2025 ICLR, ICML, NeurIPS and USENIX Security papers estimated that
+%           0.38-0.81% of their references were likely hallucinated.
+%   Source: (Abstract (p. 1); Sec. 4 Limitations; Sec. 5.2 Findings) "We apply RefChecker to
+%           accepted camera-ready papers from ICLR, ICML, NeurIPS, and USENIX Security. ... so we
+%           read the measured rates as an auditable estimate ... Across our corpus, the share of
+%           likely hallucinated references stays below one percent in essentially every venue-year.
+%           For the latest complete year, 2025, the all-reference rate is 0.38% at ICLR, 0.54% at
+%           ICML, 0.68% at NeurIPS, and 0.81% at USENIX Security; restricting the denominator to
+%           academicpaper-like references shifts these to 0.31%, 0.46%, 0.55%, and 0.42%,
+%           respectively."
+%   Note:   Supported. Context only: 0.38-0.81% is the range across the four venues (min ICLR, max
+%           USENIX Security) of the all-reference rate, not an uncertainty interval; the denominator
+%           includes non-paper entries (the academic-paper-like rates are 0.31-0.55%). The corpus is
+%           the accepted papers the authors could retrieve and extract, and the authors call the
+%           counts a lower bound under a strict definition. Optional clarification: '...estimated
+%           that 0.38--0.81\% of their references, depending on venue, were likely hallucinated'.
+% <<< citation-audit
+@misc{russinovich2026phantom,
+  author        = {Russinovich, Mark and Siva Kumar, Ram Shankar and Salem, Ahmed},
+  title         = {Phantom References: Hallucinated Citations That Survive Peer Review at Top-Tier Conferences},
+  year          = {2026},
+  eprint        = {2607.00738},
+  howpublished  = {arXiv preprint arXiv:2607.00738},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.DL},
+  doi           = {10.48550/arXiv.2607.00738},
+  url           = {https://arxiv.org/abs/2607.00738},
+  note          = {arXiv v2}
+}
+
+% >>> citation-audit zhang2026verifiable
+% Source: sources/zhang2026verifiable.pdf (arXiv v2; 2026-10-12) -- audited 2026-10-13
+% [1] main.tex:34 -- SUPPORTED
+%   Paper:  Quoting a real source does not guarantee support either: in clinical question answering,
+%           one model quoted its sources verbatim for 98.0\% of its claims, but only 37.1\% were
+%           fully substantiated by those quotes, mostly because of what the authors call
+%           ``unsupported addition'': the claim states more than its quote
+%           \citep{zhang2026verifiable}.
+%   Claim:  In clinical QA, one model (claude-opus-5) gave verbatim quotes for 98.0% of its claims
+%           but only 37.1% were fully substantiated by them; most shortfalls fall in the authors'
+%           'unsupported addition' category, where the claim states more than its quote supports.
+%   Source: (p. 1, Abstract; p. 5, Sec. 4, Finding 2; Table 3 (claude-opus-5 row: 347 of 401
+%           shortfall cases are unsupported addition)) "For instance, claude-opus-5 produces
+%           verbatim quotes for 98.0% of its claims, but fully substantiates only 37.1%. ...
+%           Unsupported addition covers cases where the quote fully substantiates some, but not all,
+%           of the statements ... in the claim. ... The vast majority of claims fall in the
+%           unsupported addition category."
+% <<< citation-audit
+@misc{zhang2026verifiable,
+  author        = {Zhang, Jiashuo and Chen, Yuling and Commodore-Mensah, Yvonne and Oberst, Michael},
+  title         = {Verifiable by Construction: Claim-Level Evaluation of Verbatim Citation in Clinical Question Answering},
+  year          = {2026},
+  eprint        = {2609.15964},
+  howpublished  = {arXiv preprint arXiv:2609.15964},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  doi           = {10.48550/arXiv.2609.15964},
+  url           = {https://arxiv.org/abs/2609.15964},
+  note          = {arXiv v2}
+}
+
+% >>> citation-audit wadden2020scifact
+% Source: sources/wadden2020scifact.pdf (EMNLP 2020 proceedings PDF; retrieved 2026-10-12) --
+%         audited 2026-10-12
+% [1] main.tex:42 -- SUPPORTED
+%   Paper:  Whether a source supports a claim is a claim-verification problem, studied first on
+%           abstracts \citep{wadden2020scifact} and now against full text.
+%   Claim:  Scientific claim verification was introduced as a task over research abstracts.
+%   Source: (p. 1, Abstract) "We introduce scientific claim verification, a new task to select
+%           abstracts from the research literature containing evidence that"
+% <<< citation-audit
+@inproceedings{wadden2020scifact,
+  author    = {Wadden, David and Lin, Shanchuan and Lo, Kyle and Wang, Lucy Lu and van Zuylen, Madeleine and Cohan, Arman and Hajishirzi, Hannaneh},
+  title     = {Fact or Fiction: Verifying Scientific Claims},
+  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing ({EMNLP})},
+  year      = {2020},
+  pages     = {7534--7550},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2020.emnlp-main.609},
+  url       = {https://aclanthology.org/2020.emnlp-main.609}
+}
+
+% >>> citation-audit acl2026statement
+% Source: sources/acl2026statement.html (undated page (includes "Update" note); 2026-10-12) --
+%         audited 2026-10-12
+% [1] main.tex:34 -- SUPPORTED
+%   Paper:  ACL identified more than 100 accepted papers citing non-existent literature during
+%           camera-ready checks \citep{acl2026statement}.
+%   Claim:  During camera-ready checks, ACL identified more than 100 accepted (ACL 2026) papers
+%           citing non-existent literature.
+%   Source: (Statement body, paragraph beginning 'During the final consistency checks') "During the
+%           final consistency checks of the camera ready versions of papers accepted to ACL 2026, we
+%           identified over 100 papers that contained citations to non-existent literature."
+% <<< citation-audit
+@misc{acl2026statement,
+  author       = {{ACL 2026 Program Committee Chairs}},
+  title        = {{ACL} Statement on Desk Rejecting Papers with Hallucinated References},
+  year         = {2026},
+  howpublished = {ACL 2026 conference website},
+  url          = {https://2026.aclweb.org/acl_statement/},
+  urldate      = {2026-10-12},
+  note         = {Signed by David Jurgens, Maria Liakata, Viviane Moreira, and Jiajun Zhang. Accessed 2026-10-12}
+}
+
+% >>> citation-audit icml2026ethics
+% Source: sources/icml2026ethics.html (undated page; 2026-10-12) -- audited 2026-10-13
+% [1] main.tex:36 -- SUPPORTED
+%   Paper:  In response to this issue, ICLR 2026 desk-rejects papers that include hallucinated
+%           references \citep{iclr2026response}, and ICML 2026 lists them among its grounds for desk
+%           rejection \citep{icml2026ethics}.
+%   Claim:  ICML 2026 lists hallucinated references among its grounds for desk rejection.
+%   Source: (Page title and intro; section 'Desk Rejection' (revised January 24, 2026)) "Peer Review
+%           Ethics 2026 ... Peer-review Ethics This document outlines ICML standards for ethical
+%           conduct of peer review. ... Grounds for desk rejection of an individual submission
+%           include (but are not limited to): Placehlolder abstracts at abstract submission. ...
+%           Hallucinated references."
+% <<< citation-audit
+@misc{icml2026ethics,
+  author       = {{ICML 2026}},
+  title        = {Peer Review Ethics 2026},
+  year         = {2026},
+  howpublished = {International Conference on Machine Learning},
+  url          = {https://icml.cc/Conferences/2026/PeerReviewEthics},
+  urldate      = {2026-10-12},
+  note         = {Accessed 2026-10-12}
+}
+
+% >>> citation-audit iclr2026response
+% Source: sources/iclr2026response.html (posted 2025-11-19; 2026-10-12) -- audited 2026-10-13
+% [1] main.tex:36 -- SUPPORTED
+%   Paper:  In response to this issue, ICLR 2026 desk-rejects papers that include hallucinated
+%           references \citep{iclr2026response}, and ICML 2026 lists them among its grounds for desk
+%           rejection \citep{icml2026ethics}.
+%   Claim:  ICLR 2026 desk-rejects papers that include hallucinated references.
+%   Source: (Post title; section 'LLM-generated papers') "ICLR 2026 Response to LLM-Generated Papers
+%           and Reviews ... Extensive and/or careless LLM usage often results in false claims,
+%           misrepresentations, or hallucinated content, including hallucinated references. As
+%           stated in our previous blog post: hallucinations of this kind would be considered a Code
+%           of Ethics violation on the part of the paper’s authors. We have been desk -rejecting,
+%           and will continue to desk -reject, any paper that includes such issues."
+% <<< citation-audit
+@misc{iclr2026response,
+  author       = {{ICLR 2026 Program Chairs}},
+  title        = {{ICLR} 2026 Response to {LLM}-Generated Papers and Reviews},
+  year         = {2025},
+  month        = nov,
+  howpublished = {ICLR Blog, 19 November 2025},
+  url          = {https://blog.iclr.cc/2025/11/19/iclr-2026-response-to-llm-generated-papers-and-reviews/},
+  urldate      = {2026-10-12},
+  note         = {Accessed 2026-10-12}
+}
+
+% >>> citation-audit aea2026datapolicy
+% Source: sources/aea2026datapolicy.html ("This version (February 2026)"; retrieved 2026-10-12) --
+%         audited 2026-10-12
+% [1] main.tex:70 -- SUPPORTED
+%   Paper:  Several economics journals require code and data that reproduce the published results,
+%           and their data editors check them before acceptance
+%           \citep{aea2026datapolicy,es2026reproducibility}; ACM awards badges to papers whose
+%           artifacts are evaluated \citep{acm2020badging}.
+%   Claim:  AEA journals require, before acceptance, data and code sufficient to reproduce results,
+%           and the AEA data editor checks them (reproducibility checks).
+%   Source: (Data and Code Availability Policy, opening paragraphs) "Prior to acceptance, authors of
+%           papers that contain empirical work, simulations, or experimental work must provide the
+%           data, code, and other details of the computations sufficient to permit replication. ...
+%           The AEA data editor will assess compliance with this policy, including by conducting
+%           reproducibility checks and verifying the accuracy of the information provided"
+%   Note:   Minor: applies to papers with empirical, simulation or experimental work, not all
+%           papers; the policy allows modified requirements when data cannot be shared.
+% <<< citation-audit
+@misc{aea2026datapolicy,
+  author       = {{American Economic Association}},
+  title        = {Data and Code Availability Policy},
+  year         = {2026},
+  howpublished = {American Economic Association website (version of February 2026)},
+  url          = {https://www.aeaweb.org/journals/data/data-code-policy},
+  urldate      = {2026-10-12},
+  note         = {Accessed 2026-10-12}
+}
+
+% >>> citation-audit es2026reproducibility
+% Source: sources/es2026reproducibility.html (undated page; retrieved 2026-10-12) -- audited
+%         2026-10-12
+% [1] main.tex:70 -- SUPPORTED
+%   Paper:  Several economics journals require code and data that reproduce the published results,
+%           and their data editors check them before acceptance
+%           \citep{aea2026datapolicy,es2026reproducibility}; ACM awards badges to papers whose
+%           artifacts are evaluated \citep{acm2020badging}.
+%   Claim:  Econometric Society journals require data and code to replicate results and conduct
+%           reproducibility checks before final acceptance.
+%   Source: (Data and Code Availability Policy, introductory paragraph) "Authors of these papers
+%           must provide, prior to acceptance, raw data, codes, and sufficient documentation to
+%           permit the replication of all the results in the paper and in the appendices approved
+%           for publication online. ... The journals of the ES will conduct reproducibility checks
+%           for the empirical, experimental, and/or simulation results included in the paper and in
+%           the approved online appendices prior to final acceptance."
+%   Note:   Minor: exemptions can be granted, and checks may be partial (Rule 8, 'selected parts'),
+%           with unchecked results disclosed in the README.
+% <<< citation-audit
+@misc{es2026reproducibility,
+  author       = {{The Econometric Society}},
+  title        = {Data and Code Availability Policy},
+  howpublished = {Econometric Society Data Editor website},
+  url          = {https://www.econometricsociety.org/publications/es-data-editor-website/data-and-code-availability-policy},
+  urldate      = {2026-10-12},
+  note         = {Accessed 2026-10-12}
+}
+
+% >>> citation-audit acm2020badging
+% Source: sources/acm2020badging.reader.txt (Version 1.1, 2020-08-24; retrieved 2026-10-12 via
+%         r.jina.ai reader proxy (Markdown rendering)) -- audited 2026-10-12
+% [1] main.tex:70 -- SUPPORTED
+%   Paper:  Several economics journals require code and data that reproduce the published results,
+%           and their data editors check them before acceptance
+%           \citep{aea2026datapolicy,es2026reproducibility}; ACM awards badges to papers whose
+%           artifacts are evaluated \citep{acm2020badging}.
+%   Claim:  ACM awards an 'Artifacts Evaluated' badge to papers whose artifacts undergo evaluation.
+%   Source: (Section 'Badging', Artifacts Evaluated) "This badge is applied to papers whose
+%           associated artifacts have successfully completed an independent audit."
+%   Note:   Minor: the badge requires the artifacts to pass the audit ('successfully completed'),
+%           not merely be evaluated, and artifact review is optional for ACM venues. Tighter
+%           wording: 'ACM awards badges to papers whose artifacts pass an independent evaluation'.
+% <<< citation-audit
+@misc{acm2020badging,
+  author       = {{Association for Computing Machinery}},
+  title        = {Artifact Review and Badging -- Current (Version 1.1)},
+  year         = {2020},
+  month        = aug,
+  howpublished = {ACM Publications Policies, Version 1.1, 24 August 2020},
+  url          = {https://www.acm.org/publications/policies/artifact-review-and-badging-current},
+  urldate      = {2026-10-12},
+  note         = {Accessed 2026-10-12}
+}

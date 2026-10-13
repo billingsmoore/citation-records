@@ -1,0 +1,17 @@
+{
+  "bibkey": "wadden2020scifact",
+  "source": "sources/wadden2020scifact.pdf",
+  "source_version": "EMNLP 2020 proceedings PDF; retrieved 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Whether a source supports a claim is a claim-verification problem, studied first on abstracts \\citep{wadden2020scifact} and now against full text.",
+      "claim": "Scientific claim verification was introduced as a task over research abstracts.",
+      "verdict": "SUPPORTED",
+      "excerpt": "We introduce scientific claim verification, a new task to select abstracts from the research literature containing evidence that",
+      "location": "p. 1, Abstract"
+    }
+  ]
+}

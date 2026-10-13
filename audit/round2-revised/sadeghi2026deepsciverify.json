@@ -1,0 +1,28 @@
+{
+  "bibkey": "sadeghi2026deepsciverify",
+  "source": "sources/sadeghi2026deepsciverify.pdf",
+  "source_version": "arXiv v1; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+      "claim": "DeepSciVerify retrieves the cited work, extracts relevant passages and judges whether they support the claim.",
+      "verdict": "SUPPORTED",
+      "excerpt": "it retrieves the complete paper when available, extracts relevant passages using RAGbased passage retrieval, and produces a final verdict from passage-level evidence.",
+      "location": "Sec. 1 Introduction (p. 1)",
+      "note": "Supported for the clause it is cited for. Its label set is SUPPORTS / CONTRADICTS / NEI, and it is correctly not cited for the partial-support clause."
+    },
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Locating the passage is harder in full text than in an abstract: RefVerifier's evidence-localization hit rate was 98\\% on abstracts and 68\\% on complete papers \\citep{mocan2026refverifier}, and supplying a verifier with the whole text helps little unless the relevant passages are selected first \\citep{sadeghi2026deepsciverify}.",
+      "claim": "Supplying a verifier with the whole text helps little unless the relevant passages are selected first.",
+      "verdict": "PARTIAL",
+      "excerpt": "Abstracts are widely available but often lack the detail needed to verify citation-level claims, while naively providing full-text documents leads to only modest improvements (Section 6.3). This suggests that the challenge is not only retrieving more information, but selecting the parts of the document most informative for the claim.",
+      "location": "Sec. 7 Discussion (p. 8); see Sec. 6.3 Main Results (p. 6)",
+      "note": "The 'helps little' part is supported (GPT-4 82.2 to 81.3 Micro-F1, Claude 81.1 to 82.4). But the 'unless the relevant passages are selected first' conditional is the authors' hedged interpretation ('This suggests'), not a tested result: the full-text baselines in Sec. 6.3 are themselves given the full-text retriever and passage-level evidence, not 'the whole text', and DeepSciVerify's gain (+4.5 Micro-F1) combines staged escalation, model-role assignment and the RAG extractor, on a single 91-instance test set (SCITANCE) that the authors say should be 'interpreted with appropriate caution'. Suggested rewording: '..., and in one small evaluation adding full-text evidence gave only modest gains, which the authors attribute to the need to select the most informative passages \\citep{sadeghi2026deepsciverify}.'"
+    }
+  ]
+}

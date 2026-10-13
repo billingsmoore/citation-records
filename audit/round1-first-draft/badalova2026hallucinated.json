@@ -1,0 +1,18 @@
+{
+  "bibkey": "badalova2026hallucinated",
+  "source": "sources/badalova2026hallucinated.pdf",
+  "source_version": "arXiv v2; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 31,
+      "sentence": "Tools that check whether references exist are widely available, though limited by reference extraction, incomplete metadata and database coverage \\citep{badalova2026hallucinated}.",
+      "claim": "Reference-existence checking tools are widely available but limited by reference extraction, incomplete metadata and database coverage.",
+      "verdict": "PARTIAL",
+      "excerpt": "Although several open research tools for detecting hallucinated citations are now available, and platforms such as arXiv have started to respond more rigorously to this issue (Chawla, 2026), current mitigation measures remain insufficiently reliable. Recent studies have shown the scale of this problem, but existing verification systems still depend heavily on the quality of reference extraction, database coverage, metadata completeness, and the matching algorithms.",
+      "location": "p. 2, Section 1 (Introduction); limitations also in Abstract, p. 1",
+      "note": "The limitations are supported (abstract: 'limited by reference extraction errors, incomplete metadata, limited database coverage, and inconsistent verification results'), but the source says 'several' tools are available and evaluates five; 'widely available' overstates this. The source also stresses that results are not reliable enough for definitive decisions (many false positives), which the sentence omits. Suggested: 'Several tools that check whether references exist are now available, but their results are limited by reference extraction errors, incomplete metadata and database coverage and still need manual checking \\citep{badalova2026hallucinated}.'"
+    }
+  ]
+}

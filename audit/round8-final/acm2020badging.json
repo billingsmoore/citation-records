@@ -1,0 +1,18 @@
+{
+  "bibkey": "acm2020badging",
+  "source": "sources/acm2020badging.reader.txt",
+  "source_version": "Version 1.1, 2020-08-24; retrieved 2026-10-12 via r.jina.ai reader proxy (Markdown rendering)",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 65,
+      "sentence": "Several economics journals require code and data that reproduce the published results, and their data editors check them before acceptance \\citep{aea2026datapolicy,es2026reproducibility}; ACM awards badges to papers whose artifacts are evaluated \\citep{acm2020badging}.",
+      "claim": "ACM awards an 'Artifacts Evaluated' badge to papers whose artifacts undergo evaluation.",
+      "verdict": "SUPPORTED",
+      "excerpt": "This badge is applied to papers whose associated artifacts have successfully completed an independent audit.",
+      "location": "Section 'Badging', Artifacts Evaluated",
+      "note": "Minor: the badge requires the artifacts to pass the audit ('successfully completed'), not merely be evaluated, and artifact review is optional for ACM venues. Tighter wording: 'ACM awards badges to papers whose artifacts pass an independent evaluation'."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "bibkey": "li2026bibagent",
+  "source": "sources/li2026bibagent.pdf",
+  "source_version": "arXiv v2; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Recent systems retrieve the cited work, locate candidate evidence and assign a verdict, typically including a partial-support category \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}.",
+      "claim": "BibAgent retrieves the cited work, locates candidate evidence and assigns a verdict that includes a partial-support category.",
+      "verdict": "PARTIAL",
+      "excerpt": "The Cited Source Accessibility Classifier (CSAC) then attempts DOI resolution, publisher full-text retrieval, and open-access surrogate matching for each referenced source. ... query an LRM (e.g., gemini-2.5-pro (Google, 2025)) to decide whether the citation is supported, miscitated, or undecidable.",
+      "location": "Sec. 3.1 Citation Parsing and Accessibility Routing; Sec. 3.2 ACSV Phase IV (pp. 4-5)",
+      "note": "Retrieval, evidence localization (ACSV) and a verdict are stated, but the verdict is supported / miscitation / undecidable. There is no partial-support category: graded problems are handled as miscitation error codes (e.g., Scope Extrapolation, Evidence Characterization), not as partial support. Suggested rewording: 'Recent systems retrieve the cited work or take it as input, locate candidate evidence and assign a verdict; some add a partial-support category \\citep{haan2025semanticcite,mocan2026refverifier}.' (cite all five for the first clause, only these two for the partial-support clause)."
+    },
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Retrieval is incomplete: RefVerifier resolved 57.6\\% of references in its test manuscripts to full text \\citep{mocan2026refverifier}, and BibAgent infers support for paywalled sources from how other papers cite them rather than from the source itself \\citep{li2026bibagent}.",
+      "claim": "BibAgent judges citations to paywalled sources from how downstream papers cite them, not from the source text.",
+      "verdict": "SUPPORTED",
+      "excerpt": "ICSV handles citations whose sources are paywalled or otherwise inaccessible. Rather than attempting to reconstruct the missing full text, it treats the research community as a noisy, distributed memory of the source. The key idea is an Evidence Committee: a set of downstream open-access papers that cite the paywalled source B and whose local citation contexts are distilled into aspect-specific evidence statements.",
+      "location": "Sec. 3.3 ICSV: The Evidence Committee Mechanism (p. 5)",
+      "note": "Supported. Minor context: ICSV abstains (Undecidable) when there are too few witness papers (K_min = 6)."
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+ "protocol": "Blind: the human saw sentence, claim, excerpt and location, not the agent verdict or note. Options: Supported, Partial, Unsupported, Can't tell from record.",
+ "labels": {
+  "baethge2025quotation#0": {
+   "sentence": "A meta-analysis of 28 studies of medical journal articles estimated that about a quarter of quotations contained an error, about half of them major \\citep{jergas2015quotation}, and an update covering 46 studies and some 32,000 quotations put the rate at 16.9\\%, with no improvement over time \\citep{baethge2025quotation}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "greenberg2009distortion#0": {
+   "sentence": "Errors of this kind compound: in one citation network, claims came to be treated as established through citation chains that distorted or omitted the underlying evidence \\citep{greenberg2009distortion}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "jergas2015quotation#0": {
+   "sentence": "A meta-analysis of 28 studies of medical journal articles estimated that about a quarter of quotations contained an error, about half of them major \\citep{jergas2015quotation}, and an update covering 46 studies and some 32,000 quotations put the rate at 16.9\\%, with no improvement over time \\citep{baethge2025quotation}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "sarol2024citationintegrity#0": {
+   "sentence": "In an annotated corpus of 3,063 citations to 100 highly cited biomedical articles, about 39\\% contained an accuracy error \\citep{sarol2024citationintegrity}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "acl2026statement#0": {
+   "sentence": "ACL identified more than 100 accepted papers citing non-existent literature during camera-ready checks \\citep{acl2026statement}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "ansari2026compound#0": {
+   "sentence": "A scan by GPTZero found 100 fabricated references, most of them to works that do not exist, in 53 papers accepted at NeurIPS 2025 \\citep{ansari2026compound}, and a scan of the 2025 papers accepted at ICLR, ICML, NeurIPS and USENIX Security estimated that 0.38--0.81\\% of their references were likely hallucinated \\citep{russinovich2026phantom}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "badalova2026hallucinated#0": {
+   "sentence": "Several tools that check whether references exist are now available, but their results are limited by reference extraction errors, incomplete metadata and database coverage, and still need manual checking \\citep{badalova2026hallucinated}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "iclr2026response#0": {
+   "sentence": "ICLR 2026 desk-rejects papers that include hallucinated references \\citep{iclr2026response}, and ICML 2026 lists them among its grounds for desk rejection \\citep{icml2026ethics}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "icml2026ethics#0": {
+   "sentence": "ICLR 2026 desk-rejects papers that include hallucinated references \\citep{iclr2026response}, and ICML 2026 lists them among its grounds for desk rejection \\citep{icml2026ethics}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "russinovich2026phantom#0": {
+   "sentence": "A scan by GPTZero found 100 fabricated references, most of them to works that do not exist, in 53 papers accepted at NeurIPS 2025 \\citep{ansari2026compound}, and a scan of the 2025 papers accepted at ICLR, ICML, NeurIPS and USENIX Security estimated that 0.38--0.81\\% of their references were likely hallucinated \\citep{russinovich2026phantom}.",
+   "human": "CANT_TELL",
+   "agent": "SUPPORTED"
+  },
+  "goo2026citefaithfulness#0": {
+   "sentence": "Verdicts depend on the verifier: in one evaluation the same outputs yielded unsupported-citation rates from about 3\\% to 18\\% depending on the verifier, and verifiers agreed far more on what was supported than on what to flag \\citep{goo2026citefaithfulness}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "haan2025semanticcite#0": {
+   "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "lee2026reflens#0": {
+   "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "li2026bibagent#0": {
+   "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+   "human": "PARTIAL",
+   "agent": "SUPPORTED"
+  },
+  "li2026bibagent#1": {
+   "sentence": "Retrieval is incomplete: RefVerifier resolved 57.6\\% of 992 references, cited by 23 sampled papers, to open-access full text \\citep{mocan2026refverifier}, and BibAgent infers support for paywalled sources from how other papers cite them rather than from the source itself \\citep{li2026bibagent}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "sarol2024citationintegrity#1": {
+   "sentence": "On human-annotated biomedical citations, the authors' best-performing model reached 0.59 micro-F1 and 0.52 macro-F1 \\citep{sarol2024citationintegrity}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "wadden2020scifact#0": {
+   "sentence": "Whether a source supports a claim is a claim-verification problem, studied first on abstracts \\citep{wadden2020scifact} and now against full text.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "mocan2026refverifier#0": {
+   "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "mocan2026refverifier#1": {
+   "sentence": "Retrieval is incomplete: RefVerifier resolved 57.6\\% of 992 references, cited by 23 sampled papers, to open-access full text \\citep{mocan2026refverifier}, and BibAgent infers support for paywalled sources from how other papers cite them rather than from the source itself \\citep{li2026bibagent}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "mocan2026refverifier#2": {
+   "sentence": "Locating the passage is harder in full text than in an abstract: RefVerifier's evidence-localization hit rate was 98\\% on abstracts and 68\\% on complete papers \\citep{mocan2026refverifier}, and in one small evaluation, adding full-text evidence changed verifier accuracy only modestly, which the authors attribute to the difficulty of selecting the most informative passages \\citep{sadeghi2026deepsciverify}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "sadeghi2026deepsciverify#0": {
+   "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "sadeghi2026deepsciverify#1": {
+   "sentence": "Locating the passage is harder in full text than in an abstract: RefVerifier's evidence-localization hit rate was 98\\% on abstracts and 68\\% on complete papers \\citep{mocan2026refverifier}, and in one small evaluation, adding full-text evidence changed verifier accuracy only modestly, which the authors attribute to the difficulty of selecting the most informative passages \\citep{sadeghi2026deepsciverify}.",
+   "human": "SUPPORTED",
+   "agent": "PARTIAL"
+  },
+  "acm2020badging#0": {
+   "sentence": "Several economics journals require code and data that reproduce the published results, and their data editors check them before acceptance \\citep{aea2026datapolicy,es2026reproducibility}; ACM awards badges to papers whose artifacts are evaluated \\citep{acm2020badging}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "aea2026datapolicy#0": {
+   "sentence": "Several economics journals require code and data that reproduce the published results, and their data editors check them before acceptance \\citep{aea2026datapolicy,es2026reproducibility}; ACM awards badges to papers whose artifacts are evaluated \\citep{acm2020badging}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "es2026reproducibility#0": {
+   "sentence": "Several economics journals require code and data that reproduce the published results, and their data editors check them before acceptance \\citep{aea2026datapolicy,es2026reproducibility}; ACM awards badges to papers whose artifacts are evaluated \\citep{acm2020badging}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  },
+  "zhang2026verifiable#0": {
+   "sentence": "A genuine excerpt does not settle it: in clinical question answering, one model quoted its sources verbatim for 98.0\\% of its claims but fully substantiated only 37.1\\% \\citep{zhang2026verifiable}.",
+   "human": "SUPPORTED",
+   "agent": "SUPPORTED"
+  }
+ },
+ "date": "2026-10-12",
+ "summary": "23/26 identical"
+}

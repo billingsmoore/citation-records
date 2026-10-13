@@ -1,0 +1,18 @@
+{
+  "bibkey": "goo2026citefaithfulness",
+  "source": "sources/goo2026citefaithfulness.pdf",
+  "source_version": "arXiv v1; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Verdicts depend on the verifier: in one evaluation the same outputs yielded unsupported-citation rates from about 3\\% to 18\\% depending on the verifier, and verifiers agreed far more on what was supported than on what to flag \\citep{goo2026citefaithfulness}.",
+      "claim": "In one evaluation, identical outputs gave unsupported-citation rates of about 3% to 18% depending on the verifier, and verifiers agreed much more on supported citations than on which to flag.",
+      "verdict": "SUPPORTED",
+      "excerpt": "the same agent outputs score about 3% to about 18% unsupported across five gold-validated verifiers, and although the verifiers agree on which citations are supported, they disagree on which to flag (negative-specific agreement 0.27 to 0.30 among the three continuous-scored verifiers)",
+      "location": "p. 2, Introduction, Contributions (see also p. 9, Sec. 5.4: positive-specific agreement 0.90-0.96 vs negative-specific 0.27-0.30)",
+      "note": ""
+    }
+  ]
+}

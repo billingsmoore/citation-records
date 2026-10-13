@@ -1,0 +1,27 @@
+{
+  "bibkey": "sarol2024citationintegrity",
+  "source": "sources/sarol2024citationintegrity.pdf",
+  "source_version": "PMC11231046.1 (published version); retrieved 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 29,
+      "sentence": "In an annotated corpus of 3,063 citations to 100 highly cited biomedical articles, about 39\\% contained an accuracy error \\citep{sarol2024citationintegrity}.",
+      "claim": "Corpus of 3,063 annotated citations to 100 highly cited biomedical articles; ~39% had accuracy errors.",
+      "verdict": "SUPPORTED",
+      "excerpt": "We manually annotated 100 highly-cited biomedical publications (reference articles) and citations to them. ... A total of 3063 citation instances were annotated (39.18% with accuracy errors).",
+      "location": "p. 1, Abstract (Results)"
+    },
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "On human-annotated biomedical citations, the authors' best-performing model reached 0.59 micro-F1 and 0.52 macro-F1 \\citep{sarol2024citationintegrity}.",
+      "claim": "The authors' best-performing model on their human-annotated biomedical citation corpus reached 0.59 micro-F1 and 0.52 macro-F1.",
+      "verdict": "SUPPORTED",
+      "excerpt": "The best performing model—which uses citation sentences as citation context, the BM25 model with MonoT5 reranker for retrieving top-20 sentences, and a fine-tuned MultiVerS model for accuracy label classification—yielded 0.59 micro-F1 and 0.52 macro-F1 score.",
+      "location": "p. 1, Abstract (Results); see also Sec. 3, Table 4 (p. 6)",
+      "note": "Supported. Context only: oracle variants given gold evidence reach 0.73-0.75 micro-F1 and GPT-4 in-context learning reaches 0.65 micro-F1 (0.45 macro-F1); 'best-performing' is the authors' own label for the end-to-end model, so the wording is accurate."
+    }
+  ]
+}

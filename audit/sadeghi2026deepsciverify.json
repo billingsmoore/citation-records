@@ -1,0 +1,28 @@
+{
+  "bibkey": "sadeghi2026deepsciverify",
+  "source": "sources/sadeghi2026deepsciverify.pdf",
+  "source_version": "arXiv v1; 2026-10-12",
+  "audited": "2026-10-13",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 42,
+      "sentence": "Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \\citep{haan2025semanticcite,mocan2026refverifier}.",
+      "claim": "DeepSciVerify retrieves the cited work, extracts relevant passages and judges whether they support the claim.",
+      "verdict": "SUPPORTED",
+      "excerpt": "it retrieves the complete paper when available, extracts relevant passages using RAGbased passage retrieval, and produces a final verdict from passage-level evidence.",
+      "location": "Sec. 1 Introduction (p. 1)",
+      "note": "Supported for the clause it is cited for. Its label set is SUPPORTS / CONTRADICTS / NEI, and it is correctly not cited for the partial-support clause."
+    },
+    {
+      "file": "main.tex",
+      "line": 42,
+      "sentence": "Second, locating the passage is difficult in a full text: RefVerifier's evidence-localization hit rate was 98\\% on abstracts but only 68\\% on complete papers \\citep{mocan2026refverifier}, and in one small evaluation, naively adding full-text evidence changed verifier accuracy only modestly, which the authors suggest reflects the difficulty of selecting the most informative passages \\citep{sadeghi2026deepsciverify}.",
+      "claim": "In one small evaluation, naively adding full-text evidence changed verifier accuracy only modestly, which the authors suggest reflects the difficulty of selecting the most informative passages.",
+      "verdict": "SUPPORTED",
+      "excerpt": "Providing access to full-text evidence improves most models, indicating that information\nbeyond the abstract can be useful. However, the gains from\nnaive full-text usage are limited: GPT-4 decreases from 82.2\nto 81.3 Micro-F1, while Claude Sonnet 4.6 improves only\nmarginally from 81.1 to 82.4. ... Since SC I TANCE uses a 91-instance test split, these gains should be\ninterpreted with appropriate caution ... while naively\nproviding full-text documents leads to only modest improvements (Section 6.3). This suggests that the challenge is not\nonly retrieving more information, but selecting the parts of\nthe document most informative for the claim.",
+      "location": "Sec. 6.3 Main Results (p. 6); Sec. 7 Discussion (p. 8)",
+      "note": "Supported. Context only: the metric is Micro-F1 (equal to accuracy for single-label classification); 'changed' correctly covers GPT-4's small drop; the 91-instance SciTance test split justifies 'one small evaluation'; 'suggest' matches the source's 'This suggests'."
+    }
+  ]
+}

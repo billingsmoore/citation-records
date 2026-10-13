@@ -1,0 +1,18 @@
+{
+  "bibkey": "iclr2026response",
+  "source": "sources/iclr2026response.html",
+  "source_version": "posted 2025-11-19; 2026-10-12",
+  "audited": "2026-10-13",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 36,
+      "sentence": "In response to this issue, ICLR 2026 desk-rejects papers that include hallucinated references \\citep{iclr2026response}, and ICML 2026 lists them among its grounds for desk rejection \\citep{icml2026ethics}.",
+      "claim": "ICLR 2026 desk-rejects papers that include hallucinated references.",
+      "verdict": "SUPPORTED",
+      "excerpt": "ICLR 2026 Response to LLM-Generated Papers and Reviews ... Extensive and/or careless LLM usage often results in false claims, misrepresentations, or hallucinated content, including hallucinated references. As stated in our previous blog post: hallucinations of this kind would be considered a Code of Ethics violation on the part of the paper’s authors. We have been desk -rejecting, and will continue to desk -reject, any paper that includes such issues.",
+      "location": "Post title; section 'LLM-generated papers'",
+      "note": ""
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "bibkey": "sadeghi2026deepsciverify",
+  "source": "sources/sadeghi2026deepsciverify.pdf",
+  "source_version": "arXiv v1; 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Recent systems retrieve the cited work, locate candidate evidence and assign a verdict, typically including a partial-support category \\citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}.",
+      "claim": "DeepSciVerify retrieves the cited work, locates candidate evidence and assigns a verdict that includes a partial-support category.",
+      "verdict": "PARTIAL",
+      "excerpt": "it retrieves the complete paper when available, extracts relevant passages ... The classifier evaluates the passages collectively and determines whether they provide sufficient evidence to support or contradict the claim. If the evidence remains inconclusive, the system outputs NEI.",
+      "location": "Sec. 1 Introduction (p. 1); Sec. 4.2.3 Passage Comparison (p. 4)",
+      "note": "Retrieval, passage extraction and a verdict are stated, but the label set is SUPPORTS / CONTRADICTS / NEI (Sec. 3). There is no partial-support category. Suggested rewording: 'Recent systems retrieve the cited work or take it as input, locate candidate evidence and assign a verdict; some add a partial-support category \\citep{haan2025semanticcite,mocan2026refverifier}.' (cite all five for the first clause, only these two for the partial-support clause)."
+    },
+    {
+      "file": "main.tex",
+      "line": 37,
+      "sentence": "Locating the passage is harder in full text than in an abstract \\citep{mocan2026refverifier,sadeghi2026deepsciverify}, and the full text is where many claims are supported.",
+      "claim": "Locating the relevant passage is harder in full text than in an abstract.",
+      "verdict": "PARTIAL",
+      "excerpt": "Abstracts are widely available but often lack the detail needed to verify citation-level claims, while naively providing full-text documents leads to only modest improvements (Section 6.3). This suggests that the challenge is not only retrieving more information, but selecting the parts of the document most informative for the claim.",
+      "location": "Sec. 7 Discussion (p. 7)",
+      "note": "DeepSciVerify does not measure passage-localization accuracy or compare locating evidence in full text with locating it in abstracts. It reports that naive full-text input gives only modest gains and suggests that selecting the relevant passages is the challenge. Its statement that 'Full-text retrieval is more challenging' (Sec. 6.1) concerns obtaining the document (80.8% vs 94.9% for abstracts), not locating passages. Suggested rewording: '...harder in full text than in an abstract \\citep{mocan2026refverifier}, and giving a verifier the whole full text helps little unless the relevant passages are selected \\citep{sadeghi2026deepsciverify}'."
+    }
+  ]
+}

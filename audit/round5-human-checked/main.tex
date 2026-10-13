@@ -1,0 +1,104 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fancyvrb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{natbib}
+\newcommand{\TBD}[1]{\textcolor{red}{[TBD: #1]}}
+
+% One paragraph per source line: tools/bibaudit.py splits sentences within a line.
+
+\title{Submit the Audit with the Bibliography:\\Claim-Level Citation Records as a Submission Artifact}
+\author{Jacob Moore\\\TBD{affiliation}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Fabricated references produced by language models have made citation checking an editorial concern, and venues now screen reference lists for works that do not exist. Existence is the easy case. Long before generative AI, roughly one quotation in six in the medical literature misrepresented its source, and a reference that exists but does not say what it is cited for passes every existence check. Automated tools that judge whether a source supports a claim are improving, but an editor running them must first retrieve each source and find the relevant passage, the two steps at which they most often fail. The author has already done both. We propose that authors submit, inside the bibliography file, a record for every citing sentence: the claim made, the passage of the source that supports it, its location, and a verdict. Like a replication package, the record does not certify correctness. It turns verification into a cheap check: whether every citing sentence has a record, whether each quoted passage occurs in the source, and whether the passage supports the claim. We describe a format embedded as comments in BibTeX, release a tool that performs the first two checks deterministically, and apply it to the references of this article.
+\end{abstract}
+
+\section{Inaccurate citation predates generative AI}
+
+A citation makes two promises: that the cited work exists, and that it says what the citing sentence attributes to it. The second has long been the weaker. A meta-analysis of 28 studies of medical journal articles estimated that about a quarter of quotations contained an error, about half of them major \citep{jergas2015quotation}, and an update covering 46 studies and some 32,000 quotations put the rate at 16.9\%, with no improvement over time \citep{baethge2025quotation}. In an annotated corpus of 3,063 citations to 100 highly cited biomedical articles, about 39\% contained an accuracy error \citep{sarol2024citationintegrity}. Errors of this kind compound: in one citation network, claims came to be treated as established through citation chains that distorted or omitted the underlying evidence \citep{greenberg2009distortion}.
+
+Language models have added a cruder failure. A scan by GPTZero found 100 fabricated references, most of them to works that do not exist, in 53 papers accepted at NeurIPS 2025 \citep{ansari2026compound}, and a scan of the 2025 papers accepted at ICLR, ICML, NeurIPS and USENIX Security estimated that 0.38--0.81\% of their references were likely hallucinated \citep{russinovich2026phantom}. ACL identified more than 100 accepted papers citing non-existent literature during camera-ready checks \citep{acl2026statement}. ICLR 2026 desk-rejects papers that include hallucinated references \citep{iclr2026response}, and ICML 2026 lists them among its grounds for desk rejection \citep{icml2026ethics}. Several tools that check whether references exist are now available, but their results are limited by reference extraction errors, incomplete metadata and database coverage, and still need manual checking \citep{badalova2026hallucinated}.
+
+Existence checking addresses the visible part of the problem. A model that is asked for a reference supporting a claim can as easily return a real paper that does not support it, and a human author can misremember, overstate or cite a secondary account. These citations resolve to real works with correct metadata, so existence checks pass them.
+
+\section{Verifying support is feasible, but expensive for the reader}
+
+The systems discussed below are those we found in a search of the literature in October 2026; the field is moving quickly, and most of the work is in preprints.
+
+Whether a source supports a claim is a claim-verification problem, studied first on abstracts \citep{wadden2020scifact} and now against full text. Recent systems take the cited work, retrieved automatically or supplied by the user, locate candidate evidence in it and judge whether it supports the claim \citep{haan2025semanticcite,mocan2026refverifier,sadeghi2026deepsciverify,lee2026reflens,li2026bibagent}; some add a partial-support verdict \citep{haan2025semanticcite,mocan2026refverifier}. Their reported weaknesses are consistent. Retrieval is incomplete: RefVerifier resolved 57.6\% of 992 references, cited by 23 sampled papers, to open-access full text \citep{mocan2026refverifier}, and BibAgent infers support for paywalled sources from how other papers cite them rather than from the source itself \citep{li2026bibagent}. Locating the passage is harder in full text than in an abstract: RefVerifier's evidence-localization hit rate was 98\% on abstracts and 68\% on complete papers \citep{mocan2026refverifier}, and in one small evaluation, naively adding full-text evidence changed verifier accuracy only modestly, which the authors suggest reflects the difficulty of selecting the most informative passages \citep{sadeghi2026deepsciverify}. Verdicts depend on the verifier: in one evaluation the same outputs yielded unsupported-citation rates from about 3\% to 18\% depending on the verifier, and verifiers agreed far more on what was supported than on what to flag \citep{goo2026citefaithfulness}. On human-annotated biomedical citations, the authors' best-performing model reached 0.59 micro-F1 and 0.52 macro-F1 \citep{sarol2024citationintegrity}.
+
+These are the conditions an editor or reviewer faces when checking a submission: without the sources at hand, without knowledge of which passage the author relied on, and with a verifier whose errors fall disproportionately on the citations worth flagging. The author faces none of the first two. When a sentence is written, the author has the source and knows, or should know, which passage supports it. The information that verification most needs exists at submission time and is then discarded.
+
+\section{Proposal: submit the audit record with the bibliography}
+
+We propose that authors submit, with the manuscript, a claim-level record of every citation, embedded in the bibliography file itself. For each citing sentence the record holds the fields in Table~\ref{tab:fields}. The format is not tied to how the record is produced: an author may write it by hand, or use a model to draft it and check the result.
+
+\begin{table}[t]
+\centering
+\caption{Fields recorded for each citing sentence.}
+\label{tab:fields}
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+Field & Content \\
+\midrule
+Location & File and line of the citing sentence in the manuscript source \\
+Sentence & The citing sentence, verbatim \\
+Claim & What the sentence attributes to this source, stated in one line \\
+Excerpt & The passage of the source that supports the claim, verbatim, with elisions marked \\
+Excerpt location & Page, section, table or figure of the excerpt in the source \\
+Verdict & Supported, partially supported, unsupported or contradicted \\
+Note & Optional: what a partial verdict lacks, or why the excerpt is indirect \\
+Source & Version of the source the excerpt is taken from, per entry \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The model is the replication package. Several economics journals require code and data that reproduce the published results, and their data editors check them before acceptance \citep{aea2026datapolicy,es2026reproducibility}; ACM awards badges to papers whose artifacts are evaluated \citep{acm2020badging}. A replication package does not certify that the analysis is right. It makes the claim that the code produces the reported numbers cheap to test, and it makes misreporting a deliberate act rather than an oversight. A citation record does the same for the claim that the source says what the paper says it does.
+
+The record supports three checks, of increasing cost. The first is completeness: every citing sentence in the manuscript has a record, and every record corresponds to a sentence still in the manuscript. This is deterministic and catches records left behind when the text changed. The second is excerpt verification: each quoted excerpt is searched for in the source text. This is also deterministic, needs only the editor's own copy of the source, and catches fabricated or misattributed excerpts, including those a model invented while drafting the record. The third is the support judgment: whether the excerpt supports the claim. A genuine excerpt does not settle it: in clinical question answering, one model quoted its sources verbatim for 98.0\% of its claims but fully substantiated only 37.1\% \citep{zhang2026verifiable}. The judgment still needs a person or a model, but it is now a local comparison of two short texts rather than a search through a paper, and an editor can sample records rather than read every source.
+
+The record does not by itself establish that a citation is accurate. An excerpt can be genuine and taken out of context, and an author can label an overstatement as supported. What the record changes is that the author's reading of each source is written down where it can be checked, at the level of the individual sentence, and that a misleading record is a statement the author made rather than an omission.
+
+\section{Embedding the record in the bibliography}
+
+We embed the record in the BibTeX file as a comment block above each entry, between fixed markers, so that it travels with the bibliography through every system that already accepts one and is ignored by BibTeX itself. Figure~\ref{fig:example} shows one block from this article's bibliography. The blocks are generated from one JSON file per reference, and a script regenerates them after every edit. Sentences that have moved are shown at their new line; records whose sentence has gone are marked \texttt{STALE}; citing sentences with no record are marked \texttt{NOT AUDITED}. The same script can rebuild the JSON from the comment blocks, so a reader holding only the manuscript and the bibliography can run every check.
+
+\begin{figure}[t]
+\centering
+\VerbatimInput[fontsize=\scriptsize,frame=single]{figures/example-block.txt}
+\caption{A generated record block from the audit of this article's first draft, as it appeared above its entry in \texttt{references.bib}. The partial verdict led to the revision of the second sentence.}
+\label{fig:example}
+\end{figure}
+
+Excerpt verification against extracted text cannot rely on exact matching alone. PDF text extraction breaks words at line ends, reorders tables, renders small capitals and ligatures inconsistently and drops mathematical notation. Our tool compares word sequences after Unicode normalization and rejoining of hyphenated words, and reports an excerpt as \texttt{MATCH} when it occurs verbatim, \texttt{NEAR} when at least 40\% of its word 4-grams occur in the source, and \texttt{MISSING} otherwise. \texttt{NEAR} is a prompt to look at the excerpt, not a verdict on it. As a control, each excerpt in this article's audit was also checked against every other source in its bibliography, and none covered more than 8\% of its 4-grams in a source other than its own.
+
+\section{Case study: the references of this article}
+
+We audited the first draft of this article with the procedure proposed here. Four instances of a language model (Claude Opus 5.5), each given the released prompt and about a quarter of the references, read the full text of each source and wrote one record per citing sentence, in about three minutes of wall-clock time. The first draft contained 12 citing sentences and 19 references, giving 25 claim records. Fifteen were judged supported and ten partially supported; none was judged unsupported or contradicted, and all 25 excerpts occurred verbatim in their sources. None of the partial verdicts concerned a citation to the wrong work. All were overstatements in the draft: a figure attributed to the wrong sample, a micro-F1 score reported as the best result when another model scored higher on that measure, a feature of two systems described as typical of five, a hedge (``likely hallucinated'') dropped, and a conference's policy cited through a secondary report rather than the conference's own page. We revised the ten sentences, the drift check marked their records \texttt{STALE}, and the revised sentences were audited again. Of 16 new records, 14 were judged supported and two partially supported. One of the two had been introduced by the revision itself: in adding a count, the revised sentence credited a scan to the paper that reanalysed it and described all of the references it found as non-existent. Two further rounds of revision and audit left all 26 records supported. The author then judged each of the 26 records blind to the agent's verdict, seeing only what an editor would see: the sentence, the stated claim and the excerpt with its location. The two verdicts agreed on 23 records. Two of the three disagreements were failures of the record rather than of the text: one excerpt described a system's components without showing that they belonged to the system named, and another gave the figures but not the hedge (``likely hallucinated'') that the sentence relied on, so neither claim could be judged from the record alone. We added to the prompt a rule that an excerpt must establish every element of the claim on its own, and revised the third sentence, which the agent had judged an overstatement. Re-audited under the revised prompt, all three were judged supported, the two rebuilt records now quote the passages that name the system and state the hedge, and every record of the final text is supported, with every excerpt found verbatim and none stale or missing. \TBD{cost per citation.} The three drafts, the records for each, the prompts and the tool are released with this article, and readers can rerun every check on it.
+
+\section{Limitations}
+
+Excerpt verification needs the source text, and an editor without access to a source cannot check its excerpts, though a publisher may hold access to sources that an individual reviewer does not. The support judgment remains fallible whether made by a person or a model. The record adds work for authors, although an author who has read each source should be able to supply its supporting passage, and a model can draft records for the author to check. Records drafted by a model share that model's failure modes, which is why the excerpt check is deterministic and the support judgment is left open to the reader. The record covers only sentences that cite: an unsupported assertion with no citation passes every check. The excerpt control above uses unrelated sources; an invented excerpt that paraphrases the right source closely could reach \texttt{NEAR}, which is why \texttt{NEAR} results should be read. Finally, the comment format is specific to BibTeX; reference managers that export CSL JSON or RIS would need an equivalent field.
+
+\section{Conclusion}
+
+Journals screen for references that do not exist because the check is cheap. Checking whether a real reference supports its claim is expensive for a reader and cheap for the author at the moment of writing. Asking authors to submit that record, in the bibliography file they already submit, moves the work to where it is cheapest and makes the remaining checks quick enough for routine editorial use.
+
+\section*{Declarations}
+\TBD{Generative AI use: models used to draft the text, search the literature, draft audit records; human verification. Data and code availability: tools/bibaudit.py, audit records and references.bib; source PDFs not redistributed. Competing interests. Funding.}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

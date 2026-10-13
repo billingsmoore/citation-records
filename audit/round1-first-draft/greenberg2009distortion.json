@@ -1,0 +1,17 @@
+{
+  "bibkey": "greenberg2009distortion",
+  "source": "sources/greenberg2009distortion.pmc.xml",
+  "source_version": "PMC2714656 full-text JATS XML; retrieved 2026-10-12",
+  "audited": "2026-10-12",
+  "claims": [
+    {
+      "file": "main.tex",
+      "line": 29,
+      "sentence": "Errors of this kind compound: in one citation network, claims came to be treated as established through citation chains that distorted or omitted the underlying evidence \\citep{greenberg2009distortion}.",
+      "claim": "In one citation network, claims became treated as established via citation chains that distorted or omitted the evidence.",
+      "verdict": "SUPPORTED",
+      "excerpt": "Unfounded authority was established by citation bias against papers that refuted or weakened the belief; amplification, the marked expansion of the belief system by papers presenting no data addressing it; and forms of invention such as the conversion of hypothesis into fact through citation alone.",
+      "location": "Abstract (Results)"
+    }
+  ]
+}
