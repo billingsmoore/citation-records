@@ -14,7 +14,7 @@ everything needed to rerun the checks.
 |---|---|
 | `main.tex` | The manuscript (master copy) |
 | `references.bib` | The bibliography, with a generated audit block above each entry |
-| `tools/bibaudit.py` | The audit tool |
+| `tools/bibaudit.py` | The audit tool (`tools/crosscheck.py`: the cross-source control) |
 | `audit/<bibkey>.json` | Current audit records, one per reference |
 | `audit/PROMPT.md` | The audit prompt (Supplementary material S1) |
 | `audit/prompts/` | The prompt actually given to each auditing agent, per round |
@@ -36,6 +36,7 @@ python3 tools/bibaudit.py check      # every citing sentence has a record, and e
 python3 tools/bibaudit.py excerpts   # every excerpt occurs in its source (needs sources/)
 python3 tools/bibaudit.py annotate   # regenerate the audit blocks in references.bib
 python3 tools/bibaudit.py extract    # rebuild audit/*.json from the blocks in references.bib
+python3 tools/crosscheck.py          # control: each excerpt against every other source (needs sources/)
 ```
 
 A reader holding only `main.tex` and `references.bib` can run `extract`, then `check` and
@@ -44,7 +45,7 @@ record format.
 
 ## License
 
-`tools/bibaudit.py` and `ese/build.py` are under the MIT License. Everything else (the
+`tools/*.py`, `ese/build.py` and `arxiv/build.py` are under the MIT License. Everything else (the
 manuscript, prompts, audit records and other text) is under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Excerpts quoted from cited
 sources in the audit records remain the work of their authors and are reproduced as

@@ -1,6 +1,6 @@
 This repository is licensed in two parts.
 
-1. Code: tools/bibaudit.py and ese/build.py are under the MIT License below.
+1. Code: tools/*.py, ese/build.py and arxiv/build.py are under the MIT License below.
 
 2. Everything else, including the manuscript, prompts, audit records and other text,
    is licensed under the Creative Commons Attribution 4.0 International License

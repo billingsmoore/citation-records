@@ -84,7 +84,7 @@ As a practical implementation, we embed the record in the BibTeX file as a comme
 \label{fig:example}
 \end{figure}
 
-Excerpt verification against extracted text cannot rely on exact matching alone. PDF text extraction breaks words at line ends, reorders tables, renders small capitals and ligatures inconsistently and drops mathematical notation. Our tool compares word sequences after Unicode normalization and rejoining of hyphenated words, and reports an excerpt as \texttt{MATCH} when it occurs verbatim, \texttt{NEAR} when at least 40\% of its word 4-grams occur in the source, and \texttt{MISSING} otherwise. \texttt{NEAR} is a prompt to look at the excerpt, not a verdict. As a control, each excerpt in this article's audit was also checked against every other source in its bibliography, and none covered more than 8\% of its 4-grams in a source other than its own.
+Excerpt verification against extracted text cannot rely on exact matching alone. PDF text extraction breaks words at line ends, reorders tables, renders small capitals and ligatures inconsistently and drops mathematical notation. Our tool compares word sequences after Unicode normalization and rejoining of hyphenated words, and reports an excerpt as \texttt{MATCH} when it occurs verbatim, \texttt{NEAR} when at least 40\% of its word 4-grams occur in the source, and \texttt{MISSING} otherwise. \texttt{NEAR} is a prompt to look at the excerpt, not a verdict. As a control, each excerpt in this article's audit was also checked against every other source in its bibliography, and none covered more than 13\% of its 4-grams in a source other than its own.
 
 \section{Case study: the references of this article}
 
