@@ -1,0 +1,62 @@
+{
+  "protocol": "The 11 records written in rounds 6-9, i.e. those not covered by labels.json. Same presentation as labels.json: the human saw sentence, claim, excerpt and location, not the agent verdict or note. Options: Supported, Partial, Unsupported, Can't tell from record. Not fully blind: the human had been told beforehand that all current records were judged SUPPORTED by the agents.",
+  "labels": {
+    "baethge2025quotation#0": {
+      "sentence": "An update in 2025, covering 46 studies and some 32,000 quotations, put the rate at 16.9\\%, with no improvement over time \\citep{baethge2025quotation}.",
+      "human": "SUPPORTED",
+      "agent": "SUPPORTED"
+    },
+    "goo2026citefaithfulness#0": {
+      "sentence": "Finally, verdicts depend on the verifier: in one evaluation the same outputs yielded unsupported-citation rates from about 3\\% to 18\\% depending on the verifier, and verifiers agreed far more on what was supported than on what to flag \\citep{goo2026citefaithfulness}.",
+      "human": "SUPPORTED",
+      "agent": "SUPPORTED"
+    },
+    "iclr2026response#0": {
+      "sentence": "In response to this issue, ICLR 2026 desk-rejects papers that include hallucinated references \\citep{iclr2026response}, and ICML 2026 lists them among its grounds for desk rejection \\citep{icml2026ethics}.",
+      "human": "SUPPORTED",
+      "agent": "SUPPORTED"
+    },
+    "icml2026ethics#0": {
+      "sentence": "In response to this issue, ICLR 2026 desk-rejects papers that include hallucinated references \\citep{iclr2026response}, and ICML 2026 lists them among its grounds for desk rejection \\citep{icml2026ethics}.",
+      "human": "SUPPORTED",
+      "agent": "SUPPORTED"
+    },
+    "jergas2015quotation#0": {
+      "sentence": "A meta-analysis of 28 studies of medical journal articles published prior to 2015 estimated that about a quarter of quotations contained an error, about half of them major \\citep{jergas2015quotation}.",
+      "human": "SUPPORTED",
+      "agent": "SUPPORTED"
+    },
+    "li2026bibagent#1": {
+      "sentence": "First, text retrieval is incomplete: RefVerifier resolved 57.6\\% of 992 references, cited by 23 sampled papers, to open-access full text \\citep{mocan2026refverifier}, and BibAgent infers support for paywalled sources from how other papers cite them rather than from the source itself \\citep{li2026bibagent}.",
+      "human": "SUPPORTED",
+      "agent": "SUPPORTED"
+    },
+    "mocan2026refverifier#1": {
+      "sentence": "First, text retrieval is incomplete: RefVerifier resolved 57.6\\% of 992 references, cited by 23 sampled papers, to open-access full text \\citep{mocan2026refverifier}, and BibAgent infers support for paywalled sources from how other papers cite them rather than from the source itself \\citep{li2026bibagent}.",
+      "human": "SUPPORTED",
+      "agent": "SUPPORTED"
+    },
+    "mocan2026refverifier#2": {
+      "sentence": "Second, locating the passage is difficult in a full text: RefVerifier's evidence-localization hit rate was 98\\% on abstracts but only 68\\% on complete papers \\citep{mocan2026refverifier}, and in one small evaluation, naively adding full-text evidence changed verifier accuracy only modestly, which the authors suggest reflects the difficulty of selecting the most informative passages \\citep{sadeghi2026deepsciverify}.",
+      "human": "SUPPORTED",
+      "agent": "SUPPORTED"
+    },
+    "sadeghi2026deepsciverify#1": {
+      "sentence": "Second, locating the passage is difficult in a full text: RefVerifier's evidence-localization hit rate was 98\\% on abstracts but only 68\\% on complete papers \\citep{mocan2026refverifier}, and in one small evaluation, naively adding full-text evidence changed verifier accuracy only modestly, which the authors suggest reflects the difficulty of selecting the most informative passages \\citep{sadeghi2026deepsciverify}.",
+      "human": "SUPPORTED",
+      "agent": "SUPPORTED"
+    },
+    "sarol2024citationintegrity#0": {
+      "sentence": "In a separate study, about 39\\% of an annotated corpus of 3,063 citations to 100 highly cited biomedical articles contained an accuracy error \\citep{sarol2024citationintegrity}.",
+      "human": "SUPPORTED",
+      "agent": "SUPPORTED"
+    },
+    "zhang2026verifiable#0": {
+      "sentence": "Quoting a real source does not guarantee support either: in clinical question answering, one model quoted its sources verbatim for 98.0\\% of its claims, but only 37.1\\% were fully substantiated by those quotes, mostly because of what the authors call ``unsupported addition'': the claim states more than its quote \\citep{zhang2026verifiable}.",
+      "human": "SUPPORTED",
+      "agent": "SUPPORTED"
+    }
+  },
+  "date": "2026-10-13",
+  "summary": "11/11 identical"
+}

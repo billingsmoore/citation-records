@@ -19,7 +19,7 @@ everything needed to rerun the checks.
 | `audit/PROMPT.md` | The audit prompt (Supplementary material S1) |
 | `audit/prompts/` | The prompt actually given to each auditing agent, per round |
 | `audit/round*/` | Snapshots of the manuscript and records after selected rounds |
-| `audit/human-check/labels.json` | The author's blind judgements of 26 records (see the case study) |
+| `audit/human-check/` | The author's judgements of the records: `labels.json` (blind, 26 records; see the case study) and `labels-round9.json` (the 11 records written afterwards) |
 | `audit/removed/` | Records for a reference cut during revision |
 | `sources/SOURCES.md` | Each cited source, with its version and retrieval date |
 | `ese/` | Build of the European Science Editing submission files |
