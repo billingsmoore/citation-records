@@ -1,12 +1,15 @@
-"""Build the arXiv source package from ../main.tex.
+r"""Build the arXiv source package from ../main.tex.
 
 arXiv compiles the TeX itself but does not run BibTeX, so the package carries a
-freshly generated main.bbl.  The bibliography's audit comment blocks are not
-needed to compile and stay in the repository.  The package is test-compiled in
-a clean directory before it is written.
+freshly generated main.bbl.  arXiv's file scan does not see \VerbatimInput and
+marks figures/ as unused, so Figure 1's text is inlined as a Verbatim block and
+the package is just main.tex and main.bbl.  The bibliography's audit comment
+blocks are not needed to compile and stay in the repository.  The package is
+test-compiled in a clean directory before it is written.
 
     python3 arxiv/build.py      # writes arxiv/arxiv-source.tar.gz and arxiv/main.pdf
 """
+import re
 import shutil
 import subprocess
 import tarfile
@@ -15,7 +18,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-FILES = ["main.tex", "main.bbl", "figures/example-block.txt"]
+FILES = ["main.tex", "main.bbl"]
 
 
 def latex(cwd: Path, bibtex: bool) -> None:
@@ -29,9 +32,13 @@ def latex(cwd: Path, bibtex: bool) -> None:
 
 with tempfile.TemporaryDirectory() as build, tempfile.TemporaryDirectory() as clean:
     build, clean = Path(build), Path(clean)
-    for f in ["main.tex", "references.bib", "figures/example-block.txt"]:
-        (build / f).parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy(ROOT / f, build / f)
+    tex = (ROOT / "main.tex").read_text()
+    tex = re.sub(r"\\VerbatimInput(\[[^\]]*\])\{([^}]*)\}",
+                 lambda m: "\\begin{Verbatim}" + m.group(1) + "\n"
+                 + (ROOT / m.group(2)).read_text().rstrip("\n") + "\n\\end{Verbatim}", tex)
+    assert "VerbatimInput" not in tex
+    (build / "main.tex").write_text(tex)
+    shutil.copy(ROOT / "references.bib", build / "references.bib")
     latex(build, bibtex=True)
 
     for f in FILES:
